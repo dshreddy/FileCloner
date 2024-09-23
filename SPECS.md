@@ -20,7 +20,7 @@ September 23, 2024
 
 ---
 # Contents
-1. [Introduction](### **1. Introduction**)
+1. [Introduction](#1-introduction)
 
 ---
 
