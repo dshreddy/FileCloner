@@ -1,10 +1,10 @@
-# **Project Specification Document**
+# **Specifications Document**
 
 ### **Project Title**:  
 File Cloner
 
 ### **Project Description**:
-.NET Windows Desktop App for Online User Detection and File Version Control
+.NET Windows Desktop App for File Version Control
 
 ### **Version**:  
 1.0
@@ -12,8 +12,15 @@ File Cloner
 ### **Prepared By**:  
 Sai Hemanth Reddy D
 
-### **Date**:  
+### **Created On**:  
 September 2, 2024
+
+### **Last Updated On**:  
+September 23, 2024
+
+---
+# Contents
+1. [Introduction](### **1. Introduction**)
 
 ---
 
@@ -21,14 +28,13 @@ September 2, 2024
 
 #### **1.1 Purpose**
 This document outlines the specifications for a .NET Windows desktop application designed to:
-- Detect online users within a network.
+- Send a broadcast message from a server
 - Request and manage access to files within a specified folder on other users' systems.
 - Perform version control operations on files based on the latest timestamps.
 - Provide a user interface for selective file synchronization based on version control criteria.
 
 #### **1.2 Scope**
-The application will allow users to see who else is online, request access to specific folders on those systems, and synchronize files across systems based on version control rules. The scope includes:
-- Online user detection.
+The application will allow users to request access to specific folders on other users systems, and synchronize files across systems based on version control rules. The scope includes:
 - Folder access requests.
 - Version control comparison and operations.
 - User interface for file selection and synchronization.
