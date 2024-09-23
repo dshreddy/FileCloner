@@ -1,4 +1,4 @@
-# **Specifications Document**
+# **Project Specifications Document**
 
 ### **Project Title**:  
 File Cloner
@@ -18,9 +18,14 @@ September 2, 2024
 ### **Last Updated On**:  
 September 23, 2024
 
----
-# Contents
+## Contents
 1. [Introduction](#1-introduction)
+2. [Functional Requirements](#2-functional-requirements)
+3. [Non Functional Requirements](#3-non-functional-requirements)
+4. [System Architecture](#4-system-architecture)
+5. [Technical Specifications](#5-technical-specifications)
+6. [Testing](#6-testing-and-validation)
+7. [Deployment](#7-deployment)
 
 ---
 
@@ -122,8 +127,3 @@ The application will allow users to request access to specific folders on other 
 #### **7.1 Deployment Environment**
 - **Target OS**: Windows 10/11
 - **Installation Package**: Create an installer using tools like Inno Setup or WiX.
-
-### **8. Maintenance**
-
-#### **8.1 Updates**
-- Plan for periodic updates to address bugs, add features, and improve performance.
