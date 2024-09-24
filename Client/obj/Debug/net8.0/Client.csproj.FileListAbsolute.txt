@@ -12,3 +12,4 @@ C:\Users\Sai Hemanth Reddy\source\repos\FileCloner\Client\obj\Debug\net8.0\refin
 C:\Users\Sai Hemanth Reddy\source\repos\FileCloner\Client\obj\Debug\net8.0\Client.pdb
 C:\Users\Sai Hemanth Reddy\source\repos\FileCloner\Client\obj\Debug\net8.0\Client.genruntimeconfig.cache
 C:\Users\Sai Hemanth Reddy\source\repos\FileCloner\Client\obj\Debug\net8.0\ref\Client.dll
+C:\Users\Sai Hemanth Reddy\source\repos\FileCloner\Client\obj\Debug\net8.0\Client.sourcelink.json
