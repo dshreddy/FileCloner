@@ -1,6 +1,5 @@
 namespace UnitTests
 {
-
     [TestClass]
     public class GitClonerTests
     {
@@ -44,7 +43,7 @@ namespace UnitTests
             }
         }
 
-        // Test: Folder cloning should successfully copy files and directories
+        // Test: Folder cloning should successfully copy files and directories and return Success status
         [TestMethod]
         public void CloneFolder_ShouldCopyFilesAndDirectories_Successfully()
         {
@@ -52,45 +51,48 @@ namespace UnitTests
             var fileCloner = new GitCloner.GitCloner();
 
             // Act
-            fileCloner.CloneFolder(_sourceDirectory, _targetDirectory);
+            var status = fileCloner.CloneFolder(_sourceDirectory, _targetDirectory);
 
             // Assert
+            Assert.AreEqual(GitCloner.CloneStatus.Success, status, "CloneFolder should return Success when cloning is successful.");
             Assert.IsTrue(Directory.Exists(_targetDirectory), "Target directory should exist after cloning.");
             Assert.IsTrue(File.Exists(Path.Combine(_targetDirectory, "TestFile.txt")), "Test file should be copied to the target directory.");
         }
 
-        // Test: Attempting to clone from a non-existent source folder should not create the target
+        // Test: Attempting to clone from a non-existent source folder should return SourceDirectoryNotFound
         [TestMethod]
-        public void CloneFolder_SourceDirectoryNotFound_ShouldNotCreateTarget()
+        public void CloneFolder_SourceDirectoryNotFound_ShouldReturnSourceDirectoryNotFound()
         {
             // Arrange
             var fileCloner = new GitCloner.GitCloner();
             string invalidSourcePath = Path.Combine(Path.GetTempPath(), "NonExistentFolder");
 
             // Act
-            fileCloner.CloneFolder(invalidSourcePath, _targetDirectory);
+            var status = fileCloner.CloneFolder(invalidSourcePath, _targetDirectory);
 
             // Assert
+            Assert.AreEqual(GitCloner.CloneStatus.SourceDirectoryNotFound, status, "CloneFolder should return SourceDirectoryNotFound when the source directory does not exist.");
             Assert.IsFalse(Directory.Exists(_targetDirectory), "Target directory should not be created when source directory does not exist.");
         }
 
-        // Test: Cloning should create a target directory if it doesn't exist
+        // Test: Cloning should return Success and create a target directory if it doesn't exist
         [TestMethod]
-        public void CloneFolder_ShouldCreateTargetDirectory()
+        public void CloneFolder_ShouldCreateTargetDirectoryAndReturnSuccess()
         {
             // Arrange
             var fileCloner = new GitCloner.GitCloner();
 
             // Act
-            fileCloner.CloneFolder(_sourceDirectory, _targetDirectory);
+            var status = fileCloner.CloneFolder(_sourceDirectory, _targetDirectory);
 
             // Assert
+            Assert.AreEqual(GitCloner.CloneStatus.Success, status, "CloneFolder should return Success when cloning is successful and the target directory is created.");
             Assert.IsTrue(Directory.Exists(_targetDirectory), "Target directory should be created if it doesn't exist.");
         }
 
-        // Test: Ensure subdirectories are also cloned
+        // Test: Ensure subdirectories are cloned and status is Success
         [TestMethod]
-        public void CloneFolder_ShouldCopySubdirectories()
+        public void CloneFolder_ShouldCopySubdirectoriesAndReturnSuccess()
         {
             // Arrange
             var fileCloner = new GitCloner.GitCloner();
@@ -99,12 +101,28 @@ namespace UnitTests
             File.WriteAllText(Path.Combine(subDirectory, "SubFile.txt"), "Sub folder content.");
 
             // Act
-            fileCloner.CloneFolder(_sourceDirectory, _targetDirectory);
+            var status = fileCloner.CloneFolder(_sourceDirectory, _targetDirectory);
 
             // Assert
+            Assert.AreEqual(GitCloner.CloneStatus.Success, status, "CloneFolder should return Success when subdirectories are successfully copied.");
             string targetSubDirectory = Path.Combine(_targetDirectory, "SubFolder");
             Assert.IsTrue(Directory.Exists(targetSubDirectory), "Subdirectory should be copied to the target directory.");
             Assert.IsTrue(File.Exists(Path.Combine(targetSubDirectory, "SubFile.txt")), "Sub file should be copied to the target directory.");
+        }
+
+        // Test: Check if TargetDirectoryCreationFailed is returned when target directory creation fails
+        [TestMethod]
+        public void CloneFolder_TargetDirectoryCreationFailed_ShouldReturnTargetDirectoryCreationFailed()
+        {
+            // Arrange
+            var fileCloner = new GitCloner.GitCloner();
+            string invalidTargetPath = Path.Combine("Z:\\", "InvalidTarget"); // Invalid path to simulate failure
+
+            // Act
+            var status = fileCloner.CloneFolder(_sourceDirectory, invalidTargetPath);
+
+            // Assert
+            Assert.AreEqual(GitCloner.CloneStatus.TargetDirectoryCreationFailed, status, "CloneFolder should return TargetDirectoryCreationFailed when the target directory cannot be created.");
         }
     }
 }

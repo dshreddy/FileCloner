@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace GitCloner
 {
+
     public class GitCloner : IGitCloner
     {
         public GitCloner() { }
 
-        public void CloneFolder(string sourcePath, string targetPath)
+        public CloneStatus CloneFolder(string sourcePath, string targetPath)
         {
             try
             {
@@ -18,23 +19,33 @@ namespace GitCloner
                 if (!Directory.Exists(sourcePath))
                 {
                     Console.WriteLine($"Source directory does not exist: {sourcePath}");
-                    return;
+                    return CloneStatus.SourceDirectoryNotFound;
                 }
 
                 // Create the target directory if it doesn't exist
                 if (!Directory.Exists(targetPath))
                 {
-                    Directory.CreateDirectory(targetPath);
+                    try
+                    {
+                        Directory.CreateDirectory(targetPath);
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine($"Failed to create target directory: {targetPath}");
+                        return CloneStatus.TargetDirectoryCreationFailed;
+                    }
                 }
 
                 // Copy all files and subdirectories
                 DirectoryCopy(sourcePath, targetPath, true);
 
                 Console.WriteLine($"Folder cloned successfully from {sourcePath} to {targetPath}");
+                return CloneStatus.Success;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred while cloning the folder: {ex.Message}");
+                return CloneStatus.CloneFailed;
             }
         }
 
