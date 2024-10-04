@@ -1,4 +1,8 @@
-﻿### Folder Structure:
+﻿# MVVM Design Pattern
+
+<img src='./Assets/mvvm.png'>
+
+### Folder Structure:
 1. **Assets**: Store UI resources like images, styles, or themes.
 2. **DataService**: Handle all data interactions such as saving and retrieving folder descriptions, managing the config.json file, and network communication with the server.
 3. **Dictionaries**: Store any application-wide resource dictionaries for WPF, such as style templates.
