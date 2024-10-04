@@ -1,6 +1,6 @@
 ﻿# MVVM Design Pattern
 
-<img src='./Assets/mvvm.png'>
+<img src='../Assets/mvvm.png' alt='A Picture describing MVVM Design Pattern'>
 
 ### Folder Structure:
 1. **Assets**: Store UI resources like images, styles, or themes.
