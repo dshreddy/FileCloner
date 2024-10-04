@@ -1,0 +1,24 @@
+﻿<Window x:Class="FileCloner.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileCloner"
+        mc:Ignorable="d"
+        Title="File Cloner" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!-- Connection Status -->
+            <TextBlock Text="Connection Status:" FontSize="16" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding IsConnected, Converter={StaticResource BoolToConnectionStatusConverter}}" 
+                       FontSize="14" HorizontalAlignment="Center"/>
+
+            <!-- Connect Button -->
+            <Button Content="Connect" Command="{Binding ConnectCommand}" Width="150" Height="40" Margin="10"/>
+
+            <!-- Requester View -->
+            <Button Content="Start File Cloning" Command="{Binding ShowRequesterViewCommand}" 
+                    Width="150" Height="40" Margin="10" IsEnabled="{Binding IsConnected}"/>
+        </StackPanel>
+    </Grid>
+</Window>
