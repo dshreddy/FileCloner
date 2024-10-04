@@ -3,22 +3,40 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FileCloner"
+        xmlns:local="clr-namespace:FileCloner.Views"
         mc:Ignorable="d"
-        Title="File Cloner" Height="450" Width="800">
+        Title="Main Window" Height="450" Width="800">
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <!-- Connection Status -->
-            <TextBlock Text="Connection Status:" FontSize="16" HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding IsConnected, Converter={StaticResource BoolToConnectionStatusConverter}}" 
-                       FontSize="14" HorizontalAlignment="Center"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
 
-            <!-- Connect Button -->
-            <Button Content="Connect" Command="{Binding ConnectCommand}" Width="150" Height="40" Margin="10"/>
+        <!-- Left half: Button to send connection request -->
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Send Connection Request" Width="200" Height="50" 
+                    Command="{Binding SendConnectionRequestCommand}"/>
+        </StackPanel>
 
-            <!-- Requester View -->
-            <Button Content="Start File Cloning" Command="{Binding ShowRequesterViewCommand}" 
-                    Width="150" Height="40" Margin="10" IsEnabled="{Binding IsConnected}"/>
+        <!-- Right half: Incoming connection requests -->
+        <StackPanel Grid.Column="1" Margin="10">
+            <ItemsControl ItemsSource="{Binding IncomingRequests}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="Black" BorderThickness="1" Padding="10" Margin="5">
+                            <StackPanel>
+                                <TextBlock Text="{Binding IPAddress}" FontWeight="Bold"/>
+                                <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                                    <Button Content="Accept" Command="{Binding DataContext.AcceptRequestCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            CommandParameter="{Binding}"/>
+                                    <Button Content="Decline" Command="{Binding DataContext.DeclineRequestCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            CommandParameter="{Binding}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
     </Grid>
 </Window>

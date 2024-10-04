@@ -7,12 +7,10 @@
         mc:Ignorable="d"
         Title="Responder View" Height="450" Width="800">
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="File Request Incoming!" FontSize="18" Margin="10" HorizontalAlignment="Center"/>
-            <TextBlock Text="A user is requesting access to your files." FontSize="14" HorizontalAlignment="Center"/>
-
-            <!-- Accept or Decline Buttons -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Incoming Request:" FontWeight="Bold" Margin="10"/>
+            <TextBlock Text="{Binding IncomingRequestDetails}" Margin="10"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Content="Accept" Command="{Binding AcceptCommand}" Width="100" Margin="5"/>
                 <Button Content="Decline" Command="{Binding DeclineCommand}" Width="100" Margin="5"/>
             </StackPanel>

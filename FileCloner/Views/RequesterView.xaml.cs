@@ -17,9 +17,9 @@ namespace FileCloner.Views
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class RequesterView : Window
     {
-        public Window1()
+        public RequesterView()
         {
             InitializeComponent();
         }

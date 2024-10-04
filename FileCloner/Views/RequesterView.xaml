@@ -8,22 +8,17 @@
         Title="Requester View" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <TextBlock Text="Select Files to Clone:" FontSize="16" Margin="10"/>
-
-            <!-- File List -->
-            <ListView ItemsSource="{Binding Files}">
-                <ListView.ItemTemplate>
+            <TextBlock Text="Select files to clone:" FontWeight="Bold" Margin="10"/>
+            <ItemsControl ItemsSource="{Binding FilesToClone}">
+                <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <CheckBox IsChecked="{Binding IsChecked}" Content="{Binding FileName}" />
+                            <CheckBox IsChecked="{Binding IsSelected}" Content="{Binding FileName}" Margin="5"/>
                         </StackPanel>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-            <!-- Start Cloning Button -->
-            <Button Content="Start Cloning" Command="{Binding StartCloningCommand}" 
-                    Width="150" Height="40" HorizontalAlignment="Center" Margin="10"/>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <Button Content="Start Cloning" Command="{Binding StartCloningCommand}" Margin="10"/>
         </StackPanel>
     </Grid>
 </Window>
