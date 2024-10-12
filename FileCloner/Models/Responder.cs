@@ -10,7 +10,22 @@ namespace FileCloner.Models
 {
     public class Responder : IResponder
     {
+        /// <summary>
+        /// The port number where the server listens for incoming requests.
+        /// </summary>
         static int listeningPortNumber = 8080;
+
+        /// <summary>
+        /// Listens for incoming connection requests from other clients on the specified IP address and port.
+        /// </summary>
+        /// <param name="ipAddress">The IP address on which to listen for incoming requests.</param>
+        /// <remarks>
+        /// This method sets up a TCP listener on the provided IP address and port number, accepting incoming 
+        /// connection requests from clients. Once a connection is accepted, the client socket is closed, 
+        /// simulating the handling of a request.
+        /// </remarks>
+        /// <exception cref="ArgumentNullException">Thrown when <paramref name="ipAddress"/> is null or empty.</exception>
+        /// <exception cref="SocketException">Thrown if there is an error in setting up or handling the TCP listener.</exception>
         public void ListenForRequests(string ipAddress)
         {
             if (string.IsNullOrEmpty(ipAddress))
@@ -27,7 +42,9 @@ namespace FileCloner.Models
                     // Wait for incoming connection
                     var client = listener.AcceptTcpClient();
                     Console.WriteLine("Received a connection request.");
-                    // You can read data from the client here (not included for now)
+
+                    // (Additional handling of the client request can go here)
+
                     client.Close();
                 }
                 catch (SocketException ex)
@@ -38,6 +55,21 @@ namespace FileCloner.Models
             }
         }
 
+        /// <summary>
+        /// Sends a reply message to the specified IP address over a TCP connection.
+        /// </summary>
+        /// <param name="message">The message to be sent to the client.</param>
+        /// <param name="ipAddress">The IP address of the client to send the reply to.</param>
+        /// <remarks>
+        /// This method establishes a TCP connection to the client at the given IP address and port, 
+        /// then sends the provided message. The connection is closed after the message is sent.
+        /// </remarks>
+        /// <exception cref="ArgumentNullException">
+        /// Thrown when <paramref name="ipAddress"/> is null or empty.
+        /// </exception>
+        /// <exception cref="SocketException">
+        /// Thrown if there is an error in establishing the TCP connection or sending the message.
+        /// </exception>
         public void ReplyTo(string message, string ipAddress)
         {
             if (string.IsNullOrEmpty(ipAddress))
@@ -62,5 +94,4 @@ namespace FileCloner.Models
                 Console.WriteLine($"Failed to send reply to {ipAddress}: {ex.Message}");
             }
         }
-    }
 }

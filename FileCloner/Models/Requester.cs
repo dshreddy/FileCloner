@@ -9,8 +9,32 @@ namespace FileCloner.Models
 {
     public class Requester : IRequester
     {
+
+        /// <summary>
+        /// The server's hostname (assumed to be localhost).
+        /// </summary>
         static string ServerHostName = "127.0.0.1";
+
+        /// <summary>
+        /// The server's port number for communication.
+        /// </summary>
         static int ServerPortNumber = 9090;
+
+        /// <summary>
+        /// Sends a request to the server to get the list of IP addresses for all connected clients.
+        /// </summary>
+        /// <returns>A list of strings representing the IP addresses received from the server.</returns>
+        /// <remarks>
+        /// This method connects to the server, sends a request message, and continuously reads the
+        /// server's response until all data is received. The server is expected to send a 
+        /// comma-separated list of IP addresses.
+        /// </remarks>
+        /// <exception cref="SocketException">
+        /// Thrown when there is a problem with the underlying socket connection.
+        /// </exception>
+        /// <exception cref="Exception">
+        /// Thrown when a general exception occurs while connecting or communicating with the server.
+        /// </exception>
         public List<string> GetAllIPAddresses()
         {
             var ipAddressList = new List<string>();
@@ -60,6 +84,22 @@ namespace FileCloner.Models
             return ipAddressList;  // Return the list of IP addresses
         }
 
+        /// <summary>
+        /// Attempts to establish a connection with a client at the specified IP address and port number.
+        /// </summary>
+        /// <param name="ipAddress">The IP address of the client to connect to.</param>
+        /// <param name="portNumber">The port number on the client to which the connection is attempted.</param>
+        /// <returns>
+        /// A <see cref="ConnectionStatus"/> indicating whether the connection was successful or failed.
+        /// </returns>
+        /// <remarks>
+        /// This method creates a socket and attempts to connect to the given IP address on the specified
+        /// port. If the connection fails, it returns <see cref="ConnectionStatus.ConnectionFailure"/>, 
+        /// otherwise it returns <see cref="ConnectionStatus.ConnectionSuccess"/>.
+        /// </remarks>
+        /// <exception cref="SocketException">
+        /// Thrown if the connection to the client fails due to a socket-related issue.
+        /// </exception>
         public ConnectionStatus ConnectToClient(string ipAddress, int portNumber)
         {
             try
