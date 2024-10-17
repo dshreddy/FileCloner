@@ -7,17 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="400">
     <StackPanel Margin="20" VerticalAlignment="Center">
-        <Label Content="Title:" FontSize="16" />
-        <TextBox Name="TitleTextBox" FontSize="16" Margin="0,0,0,10"/>
+        <Label Content="Title:" FontFamily="Comic Sans MS" FontSize="16" />
+        <TextBox Name="TitleTextBox" FontFamily="Comic Sans MS" FontSize="16" Margin="0,0,0,10"/>
 
-        <Label Content="Description:" FontSize="16" />
-        <TextBox Name="DescriptionTextBox" FontSize="16" TextWrapping="Wrap" AcceptsReturn="True" Height="80" Margin="0,0,0,10"/>
+        <Label Content="Description:" FontSize="16" FontFamily="Comic Sans MS"/>
+        <TextBox Name="DescriptionTextBox"  FontFamily="Comic Sans MS" FontSize="16" TextWrapping="Wrap" AcceptsReturn="True" Height="80" Margin="0,0,0,10"/>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,10">
             <Button Name="SaveButton" Content="Save" Click="SaveButton_Click" 
-                    Background="Green" Foreground="White" Width="100" Margin="0,0,10,0" />
+                    Background="Green" Foreground="White" Width="100" Margin="0,0,10,0" Cursor="Hand"/>
             <Button Content="Reset" Click="ResetButton_Click" 
-                    Background="Red" Foreground="White" Width="100" />
+                    Background="Red" Foreground="White" Width="100" Cursor="Pen"/>
         </StackPanel>
 
     </StackPanel>

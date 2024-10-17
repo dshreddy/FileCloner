@@ -11,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace UIFileCloner
 {
@@ -24,7 +23,7 @@ namespace UIFileCloner
         public MainWindow()
         {
             InitializeComponent();
-            filePath = "C:\\Users\\sarat\\source\\repos\\FileCloner\\UIFileCloner\\config.json"; //need to add relative path
+            filePath = Path.Combine("..", "..", "..", "..", "Assets", "config.json");
             LoadJsonData();
         }
         private void LoadJsonData()
@@ -40,12 +39,12 @@ namespace UIFileCloner
                 }
                 else
                 {
-                    MessageBox.Show("Json file is empty!");
+                    MessageBox.Show("Json file is empty!",  "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show(filePath);
+                MessageBox.Show("Json file does not exist!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -60,7 +59,7 @@ namespace UIFileCloner
             //include try catch here
             string jsonString = JsonSerializer.Serialize(newData, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(filePath, jsonString);
-            MessageBox.Show("Changes saved!");
+            MessageBox.Show("Changes saved!","Success", MessageBoxButton.OK, MessageBoxImage.Asterisk);
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
@@ -74,7 +73,7 @@ namespace UIFileCloner
             };
             string emptyJsonString = JsonSerializer.Serialize(newData, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(filePath, emptyJsonString);
-            MessageBox.Show("Succesfully reset the config file!");
+            MessageBox.Show("Succesfully reset the config file!", "Reset", MessageBoxButton.OK, MessageBoxImage.Asterisk);
         }
     }
 }
