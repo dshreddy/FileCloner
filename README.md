@@ -110,3 +110,7 @@ FileCloner is developed in Visual Studio Community 2022 with .NET 8.0 support. E
 - **NetworkService**: Sai Hemanth Reddy & Neeraj Krishna N
 - **FileExplorerServiceProvider & Summary Generator**: Sai Hemanth Reddy
 - **DiffGenerator**: Evans Samuel Biju
+
+## References
+[File Explorer UI](https://github.com/felloBonello/FileExplorer/tree/master)
+[Class & Module Diagram](https://plantuml.com/)
