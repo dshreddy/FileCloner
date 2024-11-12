@@ -27,7 +27,8 @@ namespace FileCloner.Models.NetworkService
     public class Server : INotificationHandler
     {
         // Instance of the server communicator for managing connections
-        private static CommunicatorServer server = new();
+        private static CommunicatorServer server =
+            (CommunicatorServer)CommunicationFactory.GetCommunicator(isClientSide: false);
 
         // Counter for assigning unique IDs to clients as they join
         private static int clientid = 0;
@@ -69,11 +70,16 @@ namespace FileCloner.Models.NetworkService
         /// <param name="serializedData">The serialized data received from a client.</param>
         public void OnDataReceived(string serializedData)
         {
-            // Deserialize the message to process its details
-            Message message = serializer.Deserialize<Message>(serializedData);
-
             try
             {
+                // Deserialize the message to process its details
+                Message message = serializer.Deserialize<Message>(serializedData);
+
+                if (message == null)
+                {
+                    return;
+                }
+
                 // Check if the message is a broadcast
                 if (message.To == Constants.broadcast)
                 {

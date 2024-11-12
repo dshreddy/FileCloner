@@ -1,0 +1,133 @@
+{
+  "Assets": {
+    "LAST_MODIFIED": "2024-11-12T13:53:51.8268226+05:30",
+    "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets",
+    "RELATIVE_PATH": ".",
+    "COLOR": "WHITE",
+    "ADDRESS": "10.32.11.212",
+    "CHILDREN": {
+      "Files": {
+        "LAST_MODIFIED": "2024-11-12T14:27:30.2067663+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Files",
+        "RELATIVE_PATH": "Files",
+        "COLOR": "WHITE",
+        "ADDRESS": "10.32.11.212",
+        "CHILDREN": {
+          "ReceivedFiles": {
+            "LAST_MODIFIED": "2024-11-12T14:05:08.7542574+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Files\\ReceivedFiles",
+            "RELATIVE_PATH": "Files\\ReceivedFiles",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "CHILDREN": {}
+          },
+          "SenderFiles": {
+            "LAST_MODIFIED": "2024-11-12T14:05:20.5736646+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Files\\SenderFiles",
+            "RELATIVE_PATH": "Files\\SenderFiles",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "CHILDREN": {}
+          },
+          "evans.txt.txt": {
+            "LAST_MODIFIED": "2024-11-12T14:27:36.8832417+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Files\\evans.txt.txt",
+            "RELATIVE_PATH": "Files\\evans.txt.txt",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 11
+          },
+          "input.json": {
+            "LAST_MODIFIED": "2024-11-12T14:33:59.103457+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Files\\input.json",
+            "RELATIVE_PATH": "Files\\input.json",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 6169
+          },
+          "output.json": {
+            "LAST_MODIFIED": "2024-11-12T13:53:51.8268226+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Files\\output.json",
+            "RELATIVE_PATH": "Files\\output.json",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 6378
+          }
+        }
+      },
+      "Images": {
+        "LAST_MODIFIED": "2024-11-12T14:33:09.4241748+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Images",
+        "RELATIVE_PATH": "Images",
+        "COLOR": "WHITE",
+        "ADDRESS": "10.32.11.212",
+        "CHILDREN": {
+          ".DS_Store": {
+            "LAST_MODIFIED": "2024-11-12T13:53:51.8580702+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Images\\.DS_Store",
+            "RELATIVE_PATH": "Images\\.DS_Store",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 6148
+          },
+          "copyright.jpg": {
+            "LAST_MODIFIED": "2024-11-12T14:33:09.7335508+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Images\\copyright.jpg",
+            "RELATIVE_PATH": "Images\\copyright.jpg",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 7752
+          },
+          "drive.png": {
+            "LAST_MODIFIED": "2024-11-12T13:53:51.8752139+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Images\\drive.png",
+            "RELATIVE_PATH": "Images\\drive.png",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 19500
+          },
+          "error.png": {
+            "LAST_MODIFIED": "2024-11-12T13:53:51.9078965+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Images\\error.png",
+            "RELATIVE_PATH": "Images\\error.png",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 13867
+          },
+          "file.png": {
+            "LAST_MODIFIED": "2024-11-12T13:53:51.9367752+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Images\\file.png",
+            "RELATIVE_PATH": "Images\\file.png",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 2232
+          },
+          "folder.png": {
+            "LAST_MODIFIED": "2024-11-12T13:53:51.9523935+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Images\\folder.png",
+            "RELATIVE_PATH": "Images\\folder.png",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 18431
+          },
+          "loading.png": {
+            "LAST_MODIFIED": "2024-11-12T13:53:51.9857554+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\Images\\loading.png",
+            "RELATIVE_PATH": "Images\\loading.png",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 6562
+          }
+        }
+      },
+      ".DS_Store": {
+        "LAST_MODIFIED": "2024-11-12T13:53:51.7816393+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-main\\FileCloner-main\\FileCloner\\Assets\\.DS_Store",
+        "RELATIVE_PATH": ".DS_Store",
+        "COLOR": "WHITE",
+        "ADDRESS": "10.32.11.212",
+        "SIZE": 6148
+      }
+    }
+  }
+}

@@ -47,6 +47,9 @@ namespace FileCloner.Models
         public const string broadcast = "BroadCast";
         public static string IPAddress = GetIP();
 
+        // Size of FileChunk to be sent over network
+        public static int FileChunkSize = 4096;
+
         private static string GetIP()
         {
             try
