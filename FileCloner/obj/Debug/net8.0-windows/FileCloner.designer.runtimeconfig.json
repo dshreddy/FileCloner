@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\sarat\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\sarat\\.nuget\\packages"
+      "C:\\Users\\shr\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\shr\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

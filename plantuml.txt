@@ -1,0 +1,73 @@
+@startuml
+namespace Views {
+   class MainPage {
+        +MainPage()
+    }
+}
+
+namespace ViewModels {
+    class ViewModelBase {
+        +ViewModelBase()
+    }
+    class Node{
+        +Node()
+    }
+    class RelayCommand {
+        +RelayCommand()
+    }
+    class MainPageViewModel {
+        +CreateVehicle(): Vehicle
+    }
+}
+
+namespace Models {
+    namespace NetworkService {
+         class Message{
+            + Message()
+         }
+         class Client{
+            + Client()
+         }
+         class Server{
+            + Server()
+         }
+    }
+    namespace DiffGenerator {
+         class DiffGenerator{
+            + DiffGenerator()
+         }
+         class FileMetaData{
+            + FileMetaData()
+         }
+         class Node{
+            + Node()
+         }
+         class Root{
+            + Root()
+         }
+    }
+    class FileExplorerServiceProvider{
+    }
+    class SummaryGenerator{
+         + GenerateSummary()
+    }
+    class Constants{
+    }
+}
+
+Views.MainPage o-- ViewModels.MainPageViewModel
+
+ViewModels.MainPageViewModel --|> ViewModels.ViewModelBase
+ViewModels.MainPageViewModel o-- ViewModels.Node
+ViewModels.MainPageViewModel *-- ViewModels.RelayCommand
+Models.NetworkService.Server o-- Models.NetworkService.Message
+Models.NetworkService.Client o-- Models.NetworkService.Message
+
+ViewModels.MainPageViewModel *-- Models.NetworkService.Server
+ViewModels.MainPageViewModel *-- Models.NetworkService.Client
+ViewModels.MainPageViewModel *-- Models.FileExplorerServiceProvider
+ViewModels.MainPageViewModel --> Models.SummaryGenerator
+ViewModels.MainPageViewModel --> Models.Constants
+
+
+@enduml
