@@ -5,7 +5,10 @@
 
 
 # Developers
-Views & ViewModels - Sai Hemanth Reddy & Sarath A
-NetworkService - Sai Hemanth Reddy & Neeraj Krishna N
+Views & ViewModels - Sai Hemanth Reddy & Sarath A 
+<br>
+NetworkService - Sai Hemanth Reddy & Neeraj Krishna N 
+<br>
 FileExplorerService, Summary Generator - Sai Hemanth Reddy
+<br>
 DiffGenerator - Evans Samuel Biju
