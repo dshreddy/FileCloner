@@ -17,6 +17,7 @@ using System.Windows.Forms;
 using Networking.Serialization;
 using System.IO;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace FileCloner.Models.NetworkService
 {
@@ -45,7 +46,7 @@ namespace FileCloner.Models.NetworkService
         public Client(Action<string> logAction, string ipAddress, string port)
         {
             this.logAction = logAction;
-            client = CommunicationFactory.GetCommunicator(true);
+            client = CommunicationFactory.GetCommunicator(isClientSide: true);
             serializer = new Serializer();
 
             // Start the client connection
@@ -159,23 +160,74 @@ namespace FileCloner.Models.NetworkService
         {
             try
             {
-                Message message = new Message
-                {
-                    Subject = Constants.cloning,
-                    RequestID = requestID,
-                    From = Constants.IPAddress,
-                    MetaData = requesterPath,
-                    To = from,
-                    Body = string.Join(Environment.NewLine, File.ReadAllLines(path))
-                };
+                //Message message = new Message
+                //{
+                //    Subject = Constants.cloning,
+                //    RequestID = requestID,
+                //    From = Constants.IPAddress,
+                //    MetaData = requesterPath,
+                //    To = from,
+                //    Body = string.Join(Environment.NewLine, File.ReadAllLines(path))
+                //};
 
-                client.Send(serializer.Serialize<Message>(message), Constants.moduleName, "");
+                //client.Send(serializer.Serialize<Message>(message), Constants.moduleName, "");
+
+                Thread senderThread = new Thread(() =>
+                {
+                    SendFilesInChunks(from, path, requesterPath);
+                });
+                senderThread.Start();
+
+
                 logAction?.Invoke($"[Client] Response Sent to {from}");
             }
             catch (Exception ex)
             {
                 logAction?.Invoke($"[Client] Failed to send response to from {from} : {ex.Message}");
             }
+        }
+
+        /// <summary>
+        /// Function to send files in chunks rather than at once
+        /// this function can send any type of file over the network
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="path"></param>
+        /// <param name="requesterPath"></param>
+        public void SendFilesInChunks(string from, string path, string requesterPath)
+        {
+            using FileStream fileStream = new(path, FileMode.Open, FileAccess.Read);
+            byte[] buffer = new byte[Constants.FileChunkSize];
+            int bytesRead = 0;
+            int numberOfChunksSent = 0;
+
+            try
+            {
+                while ((bytesRead = fileStream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    Message message = new Message
+                    {
+                        Subject = Constants.cloning,
+                        RequestID = requestID,
+                        From = Constants.IPAddress,
+                        MetaData = requesterPath,
+                        To = from,
+                        Body = $"{numberOfChunksSent}:" + serializer.Serialize(buffer)
+                    };
+
+                    client.Send(serializer.Serialize<Message>(message), Constants.moduleName, "");
+                    ++numberOfChunksSent;
+                    logAction?.Invoke($"[Client] Response Sent to {from}");
+                }
+            }
+            catch (Exception ex)
+            {
+                logAction?.Invoke(
+                    $"[Client] Exception occured while sending {numberOfChunksSent} : {ex.Message}"
+                );
+            }
+
+
         }
 
         /// <summary>
@@ -282,10 +334,25 @@ namespace FileCloner.Models.NetworkService
                 Directory.CreateDirectory(Path.GetDirectoryName(requesterPath));
 
                 // Write the file content to the specified path
-                using (StreamWriter writer = new StreamWriter(requesterPath))
+                //using (StreamWriter writer = new StreamWriter(requesterPath))
+                //{
+                //    writer.Write(data.Body);
+                //}
+
+                string messageBody = data.Body;
+                string[] messageBodyList = messageBody.Split(':', 2);
+                if (messageBodyList.Length != 2)
                 {
-                    writer.Write(data.Body);
+                    return;
                 }
+
+                int chunkNumber = int.Parse(messageBodyList[0]);
+                string serializedFileContent = messageBodyList[1];
+                FileMode fileMode = chunkNumber == 0 ? FileMode.Create : FileMode.Append;
+                byte[] buffer = serializer.Deserialize<byte[]>(serializedFileContent);
+
+                using FileStream fileStream = new FileStream(requesterPath, fileMode, FileAccess.Write);
+                fileStream.Write(buffer, 0, buffer.Length);
 
                 logAction?.Invoke($"[Client] File received from {data.From} and saved to {requesterPath}");
             }

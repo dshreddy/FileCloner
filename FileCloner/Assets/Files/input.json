@@ -1,115 +1,141 @@
 {
   "Assets": {
-    "LAST_MODIFIED": "2024-11-06T13:49:38+05:30",
-    "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets",
+    "LAST_MODIFIED": "2024-11-12T19:03:23.1121591+05:30",
+    "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets",
     "RELATIVE_PATH": ".",
     "COLOR": "WHITE",
-    "ADDRESS": "10.211.55.3",
+    "ADDRESS": "10.32.14.177",
     "CHILDREN": {
+      "Files": {
+        "LAST_MODIFIED": "2024-11-12T20:00:43.8825305+05:30",
+        "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files",
+        "RELATIVE_PATH": "Files",
+        "COLOR": "WHITE",
+        "ADDRESS": "10.32.14.177",
+        "CHILDREN": {
+          "ReceivedFiles": {
+            "LAST_MODIFIED": "2024-11-12T19:34:21.8231619+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles",
+            "RELATIVE_PATH": "Files\\ReceivedFiles",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.14.177",
+            "CHILDREN": {
+              "10.32.11.212.json": {
+                "LAST_MODIFIED": "2024-11-12T22:09:22.3867096+05:30",
+                "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles\\10.32.11.212.json",
+                "RELATIVE_PATH": "Files\\ReceivedFiles\\10.32.11.212.json",
+                "COLOR": "WHITE",
+                "ADDRESS": "10.32.14.177",
+                "SIZE": 7361
+              }
+            }
+          },
+          "SenderFiles": {
+            "LAST_MODIFIED": "2024-11-12T20:00:43.1769565+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles",
+            "RELATIVE_PATH": "Files\\SenderFiles",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.14.177",
+            "CHILDREN": {
+              "10.32.11.212.txt": {
+                "LAST_MODIFIED": "2024-11-12T22:11:08.0260461+05:30",
+                "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles\\10.32.11.212.txt",
+                "RELATIVE_PATH": "Files\\SenderFiles\\10.32.11.212.txt",
+                "COLOR": "WHITE",
+                "ADDRESS": "10.32.14.177",
+                "SIZE": 184
+              }
+            }
+          },
+          "evans.txt.txt": {
+            "LAST_MODIFIED": "2024-11-12T20:00:43.883533+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\evans.txt.txt",
+            "RELATIVE_PATH": "Files\\evans.txt.txt",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.14.177",
+            "SIZE": 11
+          },
+          "input.json": {
+            "LAST_MODIFIED": "2024-11-12T22:09:09.0931374+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\input.json",
+            "RELATIVE_PATH": "Files\\input.json",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.14.177",
+            "SIZE": 6195
+          },
+          "output.json": {
+            "LAST_MODIFIED": "2024-11-12T22:09:23.3210222+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\output.json",
+            "RELATIVE_PATH": "Files\\output.json",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.14.177",
+            "SIZE": 4296
+          }
+        }
+      },
       "Images": {
-        "LAST_MODIFIED": "2024-11-10T20:28:50+05:30",
-        "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Images",
+        "LAST_MODIFIED": "2024-11-12T20:06:39.6799602+05:30",
+        "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images",
         "RELATIVE_PATH": "Images",
         "COLOR": "WHITE",
-        "ADDRESS": "10.211.55.3",
+        "ADDRESS": "10.32.14.177",
         "CHILDREN": {
           ".DS_Store": {
-            "LAST_MODIFIED": "2024-11-11T21:11:56.9388541+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Images\\.DS_Store",
+            "LAST_MODIFIED": "2024-11-12T19:03:23.1121591+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\.DS_Store",
             "RELATIVE_PATH": "Images\\.DS_Store",
             "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
+            "ADDRESS": "10.32.14.177",
             "SIZE": 6148
           },
+          "drive.png": {
+            "LAST_MODIFIED": "2024-11-12T19:03:23.1121591+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\drive.png",
+            "RELATIVE_PATH": "Images\\drive.png",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.14.177",
+            "SIZE": 19500
+          },
+          "error.png": {
+            "LAST_MODIFIED": "2024-11-12T19:03:23.1131717+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\error.png",
+            "RELATIVE_PATH": "Images\\error.png",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.14.177",
+            "SIZE": 13867
+          },
           "file.png": {
-            "LAST_MODIFIED": "2024-11-11T21:11:56.9413664+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Images\\file.png",
+            "LAST_MODIFIED": "2024-11-12T19:03:23.1131717+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\file.png",
             "RELATIVE_PATH": "Images\\file.png",
             "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
+            "ADDRESS": "10.32.14.177",
             "SIZE": 2232
           },
           "folder.png": {
-            "LAST_MODIFIED": "2024-11-11T21:11:56.9422537+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Images\\folder.png",
+            "LAST_MODIFIED": "2024-11-12T19:03:23.1131717+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\folder.png",
             "RELATIVE_PATH": "Images\\folder.png",
             "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
+            "ADDRESS": "10.32.14.177",
             "SIZE": 18431
           },
-          "error.png": {
-            "LAST_MODIFIED": "2024-11-11T21:11:56.9404998+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Images\\error.png",
-            "RELATIVE_PATH": "Images\\error.png",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
-            "SIZE": 13867
-          },
-          "drive.png": {
-            "LAST_MODIFIED": "2024-11-11T21:11:56.9397433+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Images\\drive.png",
-            "RELATIVE_PATH": "Images\\drive.png",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
-            "SIZE": 19500
-          },
           "loading.png": {
-            "LAST_MODIFIED": "2024-11-11T21:11:56.9430019+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Images\\loading.png",
+            "LAST_MODIFIED": "2024-11-12T19:03:23.1141615+05:30",
+            "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\loading.png",
             "RELATIVE_PATH": "Images\\loading.png",
             "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
+            "ADDRESS": "10.32.14.177",
             "SIZE": 6562
           }
         }
       },
-      "Files": {
-        "LAST_MODIFIED": "2024-11-11T23:47:02.5581859+05:30",
-        "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Files",
-        "RELATIVE_PATH": "Files",
-        "COLOR": "WHITE",
-        "ADDRESS": "10.211.55.3",
-        "CHILDREN": {
-          "SenderFiles": {
-            "LAST_MODIFIED": "2024-11-12T00:59:06.3859232+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Files\\SenderFiles",
-            "RELATIVE_PATH": "Files\\SenderFiles",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
-            "CHILDREN": {}
-          },
-          "ReceivedFiles": {
-            "LAST_MODIFIED": "2024-11-12T00:59:10.2969507+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Files\\ReceivedFiles",
-            "RELATIVE_PATH": "Files\\ReceivedFiles",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
-            "CHILDREN": {}
-          },
-          "input.json": {
-            "LAST_MODIFIED": "2024-11-12T00:58:24.5850298+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Files\\input.json",
-            "RELATIVE_PATH": "Files\\input.json",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
-            "SIZE": 9154
-          },
-          "output.json": {
-            "LAST_MODIFIED": "2024-11-12T00:58:28.5607355+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\Files\\output.json",
-            "RELATIVE_PATH": "Files\\output.json",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
-            "SIZE": 6378
-          }
-        }
-      },
       ".DS_Store": {
-        "LAST_MODIFIED": "2024-11-11T21:11:56.9325503+05:30",
-        "FULL_PATH": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\Assets\\.DS_Store",
+        "LAST_MODIFIED": "2024-11-12T19:03:23.1111547+05:30",
+        "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\.DS_Store",
         "RELATIVE_PATH": ".DS_Store",
         "COLOR": "WHITE",
-        "ADDRESS": "10.211.55.3",
+        "ADDRESS": "10.32.14.177",
         "SIZE": 6148
       }
     }
