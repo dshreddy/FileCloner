@@ -1,6 +1,6 @@
-#FileCloner
+# FileCloner
 
-##Overview
+## Overview
 FileCloner is a dynamic file synchronization and cloning tool built in C# and WPF, designed to facilitate the efficient sharing and synchronization of files across distributed systems. Developed as a module for a Software Engineering project under Mr. Ramasawmy Krishnan Chittur, FileCloner enables peer-to-peer file requests and transfers, making it simple to identify and acquire the latest versions of files across multiple systems. This module is highly collaborative and is structured to manage requests for file clones, summarize updates, and deliver seamless synchronization between users.
 
 **Key Features**
@@ -12,7 +12,7 @@ FileCloner is a dynamic file synchronization and cloning tool built in C# and WP
 
 ![File Cloner UI](./UI.png "File Cloner UI")
 
-##System Design 
+## System Design 
 FileCloner's peer-to-peer functionality is enabled through an independent `networking` module, which handles server setup and client-server connections. A `dashboard` module is responsible for initiating server operations and managing the client-server communication. The networking module abstracts server functionalities by allowing client-to-client messaging while the server facilitates the message exchange.
 
 **Message Object for Communication**  
@@ -99,13 +99,13 @@ public class Server : INotificationHandler
 }
 ```
 
-##Class & Module Diagram 
+## Class & Module Diagram 
 ![Class and Module Diagram](./module_and_class_diagram.png "Class & Module Diagram")
 
-##Development Environment
+## Development Environment
 FileCloner is developed in Visual Studio Community 2022 with .NET 8.0 support. Ensure .NET desktop development tools are installed for optimal performance.
 
-##Contributors 
+## Contributors 
 - **Views & ViewModels**: Sai Hemanth Reddy & Sarath A
 - **NetworkService**: Sai Hemanth Reddy & Neeraj Krishna N
 - **FileExplorerServiceProvider & Summary Generator**: Sai Hemanth Reddy
