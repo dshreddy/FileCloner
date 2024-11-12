@@ -13,7 +13,7 @@ FileCloner is a file synchronization and cloning tool built in C# and WPF, desig
 ![File Cloner UI](./UI.png "File Cloner UI")
 
 ## System Design 
-FileCloner's peer-to-peer functionality is enabled through an independent `networking` module, which handles server setup and client-server connections. A `dashboard` module is responsible for initiating server operations and managing the client-server communication. The networking module abstracts server functionalities by allowing client-to-client messaging while the server facilitates the message exchange.
+FileCloner's peer-to-peer functionality is enabled through an independent `networking` module, which handles server setup and client-server connections. A `dashboard` module is responsible for initiating server operations and managing the client-server communication. The file cloner module abstracts server functionalities by allowing client-to-client messaging while the server facilitates the message exchange.
 
 **Message Object for Communication**  
 FileCloner uses a unified `Message` class for all communications, carrying essential metadata and file content:
