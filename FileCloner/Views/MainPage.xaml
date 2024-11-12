@@ -106,9 +106,24 @@
                         <Label Content="Total Size of Selected Files(bytes):"/>
                         <Label Content="{Binding SumofSelectedFilesSizeInBytes}"/>
                     </StackPanel>
-                    <Button Content="Send Request" Command="{Binding SendRequestCommand}" Width="200" Height="30" Margin="5"/>
-                    <Button Content="Summarise" Command="{Binding SummarizeCommand}" Width="200" Height="30" Margin="5"/>
-                    <Button Content="Start Cloning" Command="{Binding StartCloningCommand}" Width="200" Height="30" Margin="5"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="0" Content="Send Request" Command="{Binding SendRequestCommand}" Width="200" Height="30" Margin="5" IsEnabled="{Binding IsSendRequestEnabled}"/>
+
+                        <Button Grid.Row="0" Grid.Column="1" Content="Summarise" Command="{Binding SummarizeCommand}" Width="200" Height="30" Margin="5" IsEnabled="{Binding IsSummarizeEnabled}"/>
+
+                        <Button Grid.Row="1" Grid.Column="0" Content="Start Cloning" Command="{Binding StartCloningCommand}" Width="200" Height="30" Margin="5" Background="LightGreen" IsEnabled="{Binding IsStartCloningEnabled}"/>
+
+                        <Button Grid.Row="1" Grid.Column="1" Content="Stop Cloning" Command="{Binding StopCloningCommand}" Width="200" Height="30" Margin="5" Background="LightCoral" IsEnabled="{Binding IsStopCloningEnabled}" />
+                    </Grid>
                     <Label Content="Log" FontWeight="Bold"/>
                     <ListBox ItemsSource="{Binding LogMessages}" Width="400" Height="400" Margin="5" Background="LightYellow"/>
                 </StackPanel>

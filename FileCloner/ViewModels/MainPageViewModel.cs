@@ -114,6 +114,47 @@ namespace FileCloner.ViewModels
             }
         }
 
+        private bool _isSendRequestEnabled;
+        public bool IsSendRequestEnabled
+        {
+            get => _isSendRequestEnabled;
+            set
+            {
+                _isSendRequestEnabled = value;
+                OnPropertyChanged(nameof(IsSendRequestEnabled));
+            }
+        }
+        private bool _isSummarizeEnabled;
+        public bool IsSummarizeEnabled
+        {
+            get => _isSummarizeEnabled;
+            set
+            {
+                _isSummarizeEnabled = value;
+                OnPropertyChanged(nameof(IsSummarizeEnabled));
+            }
+        }
+        private bool _isStartCloningEnabled;
+        public bool IsStartCloningEnabled
+        {
+            get => _isStartCloningEnabled;
+            set
+            {
+                _isStartCloningEnabled = value;
+                OnPropertyChanged(nameof(IsStartCloningEnabled));
+            }
+        }
+        private bool _isStopCloningEnabled;
+        public bool IsStopCloningEnabled
+        {
+            get => _isStopCloningEnabled;
+            set
+            {
+                _isStopCloningEnabled = value;
+                OnPropertyChanged(nameof(IsStopCloningEnabled));
+            }
+        }
+
         // UI Commands for button actions
         public ICommand BrowseFoldersCommand { get; }
         public ICommand SendRequestCommand { get; }
@@ -158,9 +199,15 @@ namespace FileCloner.ViewModels
             BrowseFoldersCommand = new RelayCommand(BrowseFolders);
             StopCloningCommand = new RelayCommand(StopCloning);
 
+            //For watching files and updating any changes in the UI accordingly
             Thread fileWatcherThread = new(() => WatchFile(RootDirectoryPath));
-            fileWatcherThread.Start();
+            fileWatcherThread.Start(); 
 
+            //Only SendRequest button will be enabled in the beginning
+            IsSendRequestEnabled = true;
+            IsSummarizeEnabled = false;
+            IsStartCloningEnabled = false;
+            IsStopCloningEnabled = false;
 
             // Subscribe to CheckBoxClickEvent to update selection counts when a checkbox is clicked
             Node.CheckBoxClickEvent += UpdateCounts;
@@ -380,6 +427,9 @@ namespace FileCloner.ViewModels
             try
             {
                 _client.SendRequest();
+                IsSendRequestEnabled = false;
+                IsSummarizeEnabled = true;
+                IsStopCloningEnabled = true;
                 MessageBox.Show("Request sent successfully");
             }
             catch (Exception ex)
@@ -394,6 +444,8 @@ namespace FileCloner.ViewModels
         private void SummarizeResponses()
         {
             SummaryGenerator.GenerateSummary();
+            IsSummarizeEnabled = false;
+            IsStartCloningEnabled = true;
             Dispatcher.Invoke(() => {
                 MessageBox.Show("Summary is generated");
             });
@@ -405,6 +457,7 @@ namespace FileCloner.ViewModels
         /// </summary>
         private void StartCloning()
         {
+            IsStartCloningEnabled = false;
             // Ensure that the directory for sender files exists
             Directory.CreateDirectory(Constants.senderFilesFolderPath);
 
@@ -440,6 +493,10 @@ namespace FileCloner.ViewModels
             {
                 _client.StopCloning();
             }
+            IsSendRequestEnabled = true;
+            IsSummarizeEnabled = false;
+            IsStartCloningEnabled = false;
+            IsStopCloningEnabled = false;
         }
 
         /// <summary>
