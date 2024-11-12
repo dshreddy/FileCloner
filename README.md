@@ -1,7 +1,7 @@
 # FileCloner
 
 ## Overview
-FileCloner is a file synchronization and cloning tool built in C# and WPF, designed to facilitate the efficient sharing and synchronization of files across distributed systems. Developed as a module for a Software Engineering project under Mr. Ramasawmy Krishnan Chittur, FileCloner enables peer-to-peer file requests and transfers, making it simple to identify and acquire the latest versions of files across multiple systems. This module is highly collaborative and is structured to manage requests for file clones, summarize updates, and deliver synchronization between users.
+FileCloner is a file synchronization and cloning tool built in C# and WPF, designed to facilitate the efficient sharing and synchronization of files across distributed systems. Developed as a module for a Software Engineering project under [Mr. Ramasawmy Krishnan Chittur](https://github.com/chittur), FileCloner enables peer-to-peer file requests and transfers, making it simple to identify and acquire the latest versions of files across multiple systems. This module is highly collaborative and is structured to manage requests for file clones, summarize updates, and deliver synchronization between users.
 
 **Key Features**
 1. **Peer-to-Peer Cloning Requests:** Users can both send cloning requests as a `requester` and respond as a `responder`, creating a decentralized approach for file sharing.
