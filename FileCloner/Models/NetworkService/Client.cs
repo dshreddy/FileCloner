@@ -176,6 +176,7 @@ namespace FileCloner.Models.NetworkService
                 {
                     SendFilesInChunks(from, path, requesterPath);
                 });
+                senderThread.Start();
 
 
                 logAction?.Invoke($"[Client] Response Sent to {from}");
@@ -211,7 +212,7 @@ namespace FileCloner.Models.NetworkService
                         From = Constants.IPAddress,
                         MetaData = requesterPath,
                         To = from,
-                        Body = $"${numberOfChunksSent}:" + serializer.Serialize(buffer)
+                        Body = $"{numberOfChunksSent}:" + serializer.Serialize(buffer)
                     };
 
                     client.Send(serializer.Serialize<Message>(message), Constants.moduleName, "");

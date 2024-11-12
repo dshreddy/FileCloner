@@ -1,1 +1,1 @@
-C:\Users\EVANS SAMUEL BIJU\Downloads\FileCloner-main\FileCloner-main\FileCloner\Assets\Images\copyright.jpg, C:\dev\FileClonerIterations\FileCloner\FileCloner\Assets\Images\copyright.jpg
+C:\Users\EVANS SAMUEL BIJU\Downloads\FileCloner-neeraj-debugging\FileCloner-neeraj-debugging\FileCloner\Assets\th.jpg, C:\dev\FileClonerIterations\FileCloner\FileCloner\Assets\th.jpg
