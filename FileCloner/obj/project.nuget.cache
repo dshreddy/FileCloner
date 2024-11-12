@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HsWGVSlTiWk=",
+  "success": true,
+  "projectFilePath": "C:\\Mac\\Home\\Downloads\\PlexShare\\FileCloner\\FileCloner.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shr\\.nuget\\packages\\microsoft-windowsapicodepack-core\\1.1.5\\microsoft-windowsapicodepack-core.1.1.5.nupkg.sha512",
+    "C:\\Users\\shr\\.nuget\\packages\\microsoft-windowsapicodepack-shell\\1.1.5\\microsoft-windowsapicodepack-shell.1.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
