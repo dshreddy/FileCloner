@@ -106,9 +106,9 @@ public class Server : INotificationHandler
 FileCloner is developed in Visual Studio Community 2022 with .NET 8.0 support. Ensure .NET desktop development tools are installed for optimal performance.
 
 ## Contributors 
-- **Views & ViewModels**: Sai Hemanth Reddy & Sarath A
-- **NetworkService**: Sai Hemanth Reddy & Neeraj Krishna N
-- **FileExplorerServiceProvider & Summary Generator**: Sai Hemanth Reddy
+- **Views & ViewModels**: [Sai Hemanth Reddy](https://github.com/dshreddy) & Sarath A
+- **NetworkService**: [Sai Hemanth Reddy](https://github.com/dshreddy) & Neeraj Krishna N
+- **FileExplorerServiceProvider & Summary Generator**: [Sai Hemanth Reddy](https://github.com/dshreddy)
 - **DiffGenerator**: Evans Samuel Biju
 
 ## References
