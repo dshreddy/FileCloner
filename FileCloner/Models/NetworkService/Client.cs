@@ -18,6 +18,7 @@ using Networking.Serialization;
 using System.IO;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.ComponentModel;
 
 namespace FileCloner.Models.NetworkService
 {
@@ -200,6 +201,12 @@ namespace FileCloner.Models.NetworkService
             byte[] buffer = new byte[Constants.FileChunkSize];
             int bytesRead = 0;
             int numberOfChunksSent = 0;
+            FileInfo fileInfo = new(path);
+            long fileSizeInBytes = fileInfo.Length;
+
+            long numberOfTransmissionsRequired = (long)Math.Ceiling(
+                (double)fileSizeInBytes / (double)Constants.FileChunkSize
+            );
 
             try
             {
@@ -212,7 +219,7 @@ namespace FileCloner.Models.NetworkService
                         From = Constants.IPAddress,
                         MetaData = requesterPath,
                         To = from,
-                        Body = $"{numberOfChunksSent}:" + serializer.Serialize(buffer)
+                        Body = $"{numberOfChunksSent}/{numberOfTransmissionsRequired}:" + serializer.Serialize(buffer)
                     };
 
                     client.Send(serializer.Serialize<Message>(message), Constants.moduleName, "");
@@ -325,6 +332,8 @@ namespace FileCloner.Models.NetworkService
         /// </summary>
         public void OnFileForCloningReceived(Message data)
         {
+            long chunkNumber = 0;
+            long numberOfTransmissionsRequired = 0;
             try
             {
                 // Extract the save path from message metadata
@@ -346,7 +355,19 @@ namespace FileCloner.Models.NetworkService
                     return;
                 }
 
-                int chunkNumber = int.Parse(messageBodyList[0]);
+                string[] chunkNumberByNumberOfTransmissionsRequired = messageBodyList[0].Split('/', 2);
+                if (chunkNumberByNumberOfTransmissionsRequired.Length != 2) 
+                {
+                    // code should never reach here
+                    logAction?.Invoke("Sending Files in Wrong Format");
+                    // throw new Exception("Sending Files in Wrong Format");
+                    return;
+                }
+
+                chunkNumber = long.Parse(chunkNumberByNumberOfTransmissionsRequired[0]);
+                numberOfTransmissionsRequired = long.Parse(chunkNumberByNumberOfTransmissionsRequired[1]);
+
+
                 string serializedFileContent = messageBodyList[1];
                 FileMode fileMode = chunkNumber == 0 ? FileMode.Create : FileMode.Append;
                 byte[] buffer = serializer.Deserialize<byte[]>(serializedFileContent);
@@ -354,10 +375,19 @@ namespace FileCloner.Models.NetworkService
                 using FileStream fileStream = new FileStream(requesterPath, fileMode, FileAccess.Write);
                 fileStream.Write(buffer, 0, buffer.Length);
 
-                logAction?.Invoke($"[Client] File received from {data.From} and saved to {requesterPath}");
+                logAction?.Invoke(
+                    $"[Client] File chunk : {chunkNumber}/{numberOfTransmissionsRequired} from"
+                    + " {data.From} and saved to {requesterPath}"
+                );
+
+                if (chunkNumber == numberOfTransmissionsRequired)
+                {
+                    logAction?.Invoke($"[Client] File received from {data.From} and saved to {requesterPath}");
+                }
             }
             catch (Exception ex)
             {
+                // try to log it some file regarding how many chunks have been saved
                 logAction?.Invoke($"[Client] Failed to save received file from {data.From}: {ex.Message}");
             }
         }

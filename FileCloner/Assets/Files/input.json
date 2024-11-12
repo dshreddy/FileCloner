@@ -1,6 +1,6 @@
 {
   "Assets": {
-    "LAST_MODIFIED": "2024-11-12T19:03:23.1121591+05:30",
+    "LAST_MODIFIED": "2024-11-12T23:48:35.1001777+05:30",
     "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets",
     "RELATIVE_PATH": ".",
     "COLOR": "WHITE",
@@ -14,62 +14,78 @@
         "ADDRESS": "10.32.14.177",
         "CHILDREN": {
           "ReceivedFiles": {
-            "LAST_MODIFIED": "2024-11-12T19:34:21.8231619+05:30",
+            "LAST_MODIFIED": "2024-11-12T23:42:04.5087924+05:30",
             "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles",
             "RELATIVE_PATH": "Files\\ReceivedFiles",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.14.177",
             "CHILDREN": {
               "10.32.11.212.json": {
-                "LAST_MODIFIED": "2024-11-12T22:09:22.3867096+05:30",
+                "LAST_MODIFIED": "2024-11-12T23:42:48.2077865+05:30",
                 "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles\\10.32.11.212.json",
                 "RELATIVE_PATH": "Files\\ReceivedFiles\\10.32.11.212.json",
                 "COLOR": "WHITE",
                 "ADDRESS": "10.32.14.177",
-                "SIZE": 7361
+                "SIZE": 8192
+              },
+              "10.32.16.142.json": {
+                "LAST_MODIFIED": "2024-11-12T23:42:04.5087924+05:30",
+                "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles\\10.32.16.142.json",
+                "RELATIVE_PATH": "Files\\ReceivedFiles\\10.32.16.142.json",
+                "COLOR": "WHITE",
+                "ADDRESS": "10.32.14.177",
+                "SIZE": 6750
               }
             }
           },
           "SenderFiles": {
-            "LAST_MODIFIED": "2024-11-12T20:00:43.1769565+05:30",
+            "LAST_MODIFIED": "2024-11-12T23:42:32.1530689+05:30",
             "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles",
             "RELATIVE_PATH": "Files\\SenderFiles",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.14.177",
             "CHILDREN": {
               "10.32.11.212.txt": {
-                "LAST_MODIFIED": "2024-11-12T22:11:08.0260461+05:30",
+                "LAST_MODIFIED": "2024-11-12T23:42:47.6212727+05:30",
                 "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles\\10.32.11.212.txt",
                 "RELATIVE_PATH": "Files\\SenderFiles\\10.32.11.212.txt",
                 "COLOR": "WHITE",
                 "ADDRESS": "10.32.14.177",
-                "SIZE": 184
+                "SIZE": 4096
+              },
+              "10.32.16.142.txt": {
+                "LAST_MODIFIED": "2024-11-12T23:42:32.1539802+05:30",
+                "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles\\10.32.16.142.txt",
+                "RELATIVE_PATH": "Files\\SenderFiles\\10.32.16.142.txt",
+                "COLOR": "WHITE",
+                "ADDRESS": "10.32.14.177",
+                "SIZE": 3883
               }
             }
           },
           "evans.txt.txt": {
-            "LAST_MODIFIED": "2024-11-12T20:00:43.883533+05:30",
+            "LAST_MODIFIED": "2024-11-12T23:42:49.0963679+05:30",
             "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\evans.txt.txt",
             "RELATIVE_PATH": "Files\\evans.txt.txt",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.14.177",
-            "SIZE": 11
+            "SIZE": 4096
           },
           "input.json": {
-            "LAST_MODIFIED": "2024-11-12T22:09:09.0931374+05:30",
+            "LAST_MODIFIED": "2024-11-12T23:42:50.6668587+05:30",
             "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\input.json",
             "RELATIVE_PATH": "Files\\input.json",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.14.177",
-            "SIZE": 6195
+            "SIZE": 8192
           },
           "output.json": {
-            "LAST_MODIFIED": "2024-11-12T22:09:23.3210222+05:30",
+            "LAST_MODIFIED": "2024-11-12T23:42:52.5096677+05:30",
             "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Files\\output.json",
             "RELATIVE_PATH": "Files\\output.json",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.14.177",
-            "SIZE": 4296
+            "SIZE": 8192
           }
         }
       },
@@ -81,28 +97,28 @@
         "ADDRESS": "10.32.14.177",
         "CHILDREN": {
           ".DS_Store": {
-            "LAST_MODIFIED": "2024-11-12T19:03:23.1121591+05:30",
+            "LAST_MODIFIED": "2024-11-12T23:42:54.0276147+05:30",
             "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\.DS_Store",
             "RELATIVE_PATH": "Images\\.DS_Store",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.14.177",
-            "SIZE": 6148
+            "SIZE": 8192
           },
           "drive.png": {
-            "LAST_MODIFIED": "2024-11-12T19:03:23.1121591+05:30",
+            "LAST_MODIFIED": "2024-11-12T23:42:58.3995792+05:30",
             "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\drive.png",
             "RELATIVE_PATH": "Images\\drive.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.14.177",
-            "SIZE": 19500
+            "SIZE": 20480
           },
           "error.png": {
-            "LAST_MODIFIED": "2024-11-12T19:03:23.1131717+05:30",
+            "LAST_MODIFIED": "2024-11-12T23:43:00.3529048+05:30",
             "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\error.png",
             "RELATIVE_PATH": "Images\\error.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.14.177",
-            "SIZE": 13867
+            "SIZE": 16384
           },
           "file.png": {
             "LAST_MODIFIED": "2024-11-12T19:03:23.1131717+05:30",
@@ -121,22 +137,22 @@
             "SIZE": 18431
           },
           "loading.png": {
-            "LAST_MODIFIED": "2024-11-12T19:03:23.1141615+05:30",
+            "LAST_MODIFIED": "2024-11-12T23:43:02.8741939+05:30",
             "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\Images\\loading.png",
             "RELATIVE_PATH": "Images\\loading.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.14.177",
-            "SIZE": 6562
+            "SIZE": 8192
           }
         }
       },
       ".DS_Store": {
-        "LAST_MODIFIED": "2024-11-12T19:03:23.1111547+05:30",
+        "LAST_MODIFIED": "2024-11-12T23:43:06.7427559+05:30",
         "FULL_PATH": "C:\\dev\\FileClonerIterations\\FileCloner\\FileCloner\\Assets\\.DS_Store",
         "RELATIVE_PATH": ".DS_Store",
         "COLOR": "WHITE",
         "ADDRESS": "10.32.14.177",
-        "SIZE": 6148
+        "SIZE": 8192
       }
     }
   }

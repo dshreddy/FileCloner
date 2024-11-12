@@ -1,0 +1,5 @@
+C:\Users\sarat\temp\Neeraj\FileCloner\FileCloner\Assets\Images\file.png, C:\dev\FileClonerIterations\FileCloner\FileCloner\Assets\Images\file.png
+C:\Users\sarat\temp\Neeraj\FileCloner\FileCloner\Assets\Images\folder.png, C:\dev\FileClonerIterations\FileCloner\FileCloner\Assets\Images\folder.png
+C:\Users\sarat\temp\Neeraj\FileCloner\FileCloner\Assets\Sarath\IMG_8443.MOV, C:\dev\FileClonerIterations\FileCloner\FileCloner\Assets\Sarath\IMG_8443.MOV
+C:\Users\sarat\temp\Neeraj\FileCloner\FileCloner\Assets\Images\folder.png, C:\dev\FileClonerIterations\FileCloner\FileCloner\Assets\Images\folder.png
+C:\Users\sarat\temp\Neeraj\FileCloner\FileCloner\Assets\Images\file.png, C:\dev\FileClonerIterations\FileCloner\FileCloner\Assets\Images\file.png

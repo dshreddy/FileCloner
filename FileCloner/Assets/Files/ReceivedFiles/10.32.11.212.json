@@ -1,11 +1,36 @@
 {
   "Assets": {
-    "LAST_MODIFIED": "2024-11-12T16:34:07.8931128+05:30",
+    "LAST_MODIFIED": "2024-11-12T17:27:39.2777946+05:30",
     "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets",
     "RELATIVE_PATH": ".",
     "COLOR": "WHITE",
     "ADDRESS": "10.32.11.212",
     "CHILDREN": {
+      "Dummy Folder": {
+        "LAST_MODIFIED": "2024-11-12T17:24:07.3199336+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Dummy Folder",
+        "RELATIVE_PATH": "Dummy Folder",
+        "COLOR": "WHITE",
+        "ADDRESS": "10.32.11.212",
+        "CHILDREN": {
+          "pexels-jonathanborba-29327972.jpg": {
+            "LAST_MODIFIED": "2024-11-12T17:17:30.7361759+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Dummy Folder\\pexels-jonathanborba-29327972.jpg",
+            "RELATIVE_PATH": "Dummy Folder\\pexels-jonathanborba-29327972.jpg",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 2394277
+          },
+          "pexels-monkeytactics-18789466.jpg": {
+            "LAST_MODIFIED": "2024-11-12T17:16:57.9890478+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Dummy Folder\\pexels-monkeytactics-18789466.jpg",
+            "RELATIVE_PATH": "Dummy Folder\\pexels-monkeytactics-18789466.jpg",
+            "COLOR": "WHITE",
+            "ADDRESS": "10.32.11.212",
+            "SIZE": 1047519
+          }
+        }
+      },
       "Files": {
         "LAST_MODIFIED": "2024-11-12T16:31:46.2832471+05:30",
         "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files",
@@ -56,12 +81,12 @@
             "SIZE": 11
           },
           "input.json": {
-            "LAST_MODIFIED": "2024-11-12T16:39:15.5772908+05:30",
+            "LAST_MODIFIED": "2024-11-12T18:11:44.5509979+05:30",
             "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files\\input.json",
             "RELATIVE_PATH": "Files\\input.json",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
-            "SIZE": 7511
+            "SIZE": 10342
           },
           "output.json": {
             "LAST_MODIFIED": "2024-11-12T16:31:46.2357129+05:30",
@@ -137,6 +162,30 @@
         "COLOR": "WHITE",
         "ADDRESS": "10.32.11.212",
         "SIZE": 6148
+      },
+      "Dexter C. Kozen (auth.) Automata and Computability 1977.pdf": {
+        "LAST_MODIFIED": "2024-11-12T17:25:46.793156+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Dexter C. Kozen (auth.) Automata and Computability 1977.pdf",
+        "RELATIVE_PATH": "Dexter C. Kozen (auth.) Automata and Computability 1977.pdf",
+        "COLOR": "WHITE",
+        "ADDRESS": "10.32.11.212",
+        "SIZE": 45756455
+      },
+      "pexels-jonathanborba-29327947.jpg": {
+        "LAST_MODIFIED": "2024-11-12T17:23:17.7430449+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\pexels-jonathanborba-29327947.jpg",
+        "RELATIVE_PATH": "pexels-jonathanborba-29327947.jpg",
+        "COLOR": "WHITE",
+        "ADDRESS": "10.32.11.212",
+        "SIZE": 1876661
+      },
+      "pexels-jonathanborba-29360730.jpg": {
+        "LAST_MODIFIED": "2024-11-12T17:16:45.2502867+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\pexels-jonathanborba-29360730.jpg",
+        "RELATIVE_PATH": "pexels-jonathanborba-29360730.jpg",
+        "COLOR": "WHITE",
+        "ADDRESS": "10.32.11.212",
+        "SIZE": 1524531
       },
       "th.jpg": {
         "LAST_MODIFIED": "2024-11-12T16:34:08.2930115+05:30",
