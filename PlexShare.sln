@@ -7,7 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileCloner", "FileCloner\Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Network", "Network\Network.csproj", "{D7825F09-4914-487E-B002-161B25085498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileClonerTests", "FileClonerTests\FileClonerTests.csproj", "{E96D9665-203C-4195-8394-174D8DAF3689}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileClonerTests", "FileClonerTests\FileClonerTests.csproj", "{E96D9665-203C-4195-8394-174D8DAF3689}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CE3642A3-3A8D-47A2-81D1-48EC0993D0D1}"
+	ProjectSection(SolutionItems) = preProject
+		LICENCE.md = LICENCE.md
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
