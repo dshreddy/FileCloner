@@ -186,6 +186,13 @@ namespace FileCloner.Models.NetworkService
             }
         }
 
+        /// <summary>
+        /// Function to send files in chunks rather than at once
+        /// this function can send any type of file over the network
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="path"></param>
+        /// <param name="requesterPath"></param>
         public void SendFilesInChunks(string from, string path, string requesterPath)
         {
             using FileStream fileStream = new(path, FileMode.Open, FileAccess.Read);
