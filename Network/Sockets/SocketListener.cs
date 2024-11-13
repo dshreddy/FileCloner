@@ -181,18 +181,25 @@ namespace Networking.Sockets
                 // get the packet string from the received string and
                 // convert it back to packet and enqueue the packet
                 // to receiving queue
-                string packetString = receivedString[
-                    packetBegin..(packetEnd + 6)];
-                Packet packet = PacketString.PacketStringToPacket(
-                    packetString);
-                _receivingQueue.Enqueue(packet);
+                try
+                {
+                    string packetString = receivedString[
+                        packetBegin..(packetEnd + 6)];
+                    Packet packet = PacketString.PacketStringToPacket(
+                        packetString);
+                    _receivingQueue.Enqueue(packet);
 
-                // remove the first packet from the received string
-                receivedString = receivedString[(packetEnd + 6)..];
+                    // remove the first packet from the received string
+                    receivedString = receivedString[(packetEnd + 6)..];
 
-                Trace.WriteLine("[Networking] SocketListener:" +
-                    " Received data from module: "
-                    + packet.moduleOfPacket);
+                    Trace.WriteLine("[Networking] SocketListener:" +
+                        " Received data from module: "
+                        + packet.moduleOfPacket);
+                }
+                catch (Exception ex)
+                {
+                    Trace.WriteLine($"[Networking] (FileClonerModification) {ex.Message}");
+                }
             }
             Trace.WriteLine("[Networking] SocketListener." +
                 "ProcessReceivedString() function exited.");
