@@ -1,199 +1,166 @@
 {
   "Assets": {
-    "LAST_MODIFIED": "2024-11-12T17:27:39.2777946+05:30",
-    "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets",
+    "LAST_MODIFIED": "2024-11-13T10:54:25.2316465+05:30",
+    "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets",
     "RELATIVE_PATH": ".",
     "COLOR": "WHITE",
     "ADDRESS": "10.32.11.212",
     "CHILDREN": {
-      "Dummy Folder": {
-        "LAST_MODIFIED": "2024-11-12T17:24:07.3199336+05:30",
-        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Dummy Folder",
-        "RELATIVE_PATH": "Dummy Folder",
-        "COLOR": "WHITE",
-        "ADDRESS": "10.32.11.212",
-        "CHILDREN": {
-          "pexels-jonathanborba-29327972.jpg": {
-            "LAST_MODIFIED": "2024-11-12T17:17:30.7361759+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Dummy Folder\\pexels-jonathanborba-29327972.jpg",
-            "RELATIVE_PATH": "Dummy Folder\\pexels-jonathanborba-29327972.jpg",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.32.11.212",
-            "SIZE": 2394277
-          },
-          "pexels-monkeytactics-18789466.jpg": {
-            "LAST_MODIFIED": "2024-11-12T17:16:57.9890478+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Dummy Folder\\pexels-monkeytactics-18789466.jpg",
-            "RELATIVE_PATH": "Dummy Folder\\pexels-monkeytactics-18789466.jpg",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.32.11.212",
-            "SIZE": 1047519
-          }
-        }
-      },
       "Files": {
-        "LAST_MODIFIED": "2024-11-12T16:31:46.2832471+05:30",
-        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files",
+        "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files",
         "RELATIVE_PATH": "Files",
         "COLOR": "WHITE",
         "ADDRESS": "10.32.11.212",
         "CHILDREN": {
           "ReceivedFiles": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.2514377+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files\\ReceivedFiles",
+            "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles",
             "RELATIVE_PATH": "Files\\ReceivedFiles",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
             "CHILDREN": {
               "10.32.11.212.json": {
-                "LAST_MODIFIED": "2024-11-12T16:31:46.2832471+05:30",
-                "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files\\ReceivedFiles\\10.32.11.212.json",
+                "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+                "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles\\10.32.11.212.json",
                 "RELATIVE_PATH": "Files\\ReceivedFiles\\10.32.11.212.json",
                 "COLOR": "WHITE",
                 "ADDRESS": "10.32.11.212",
-                "SIZE": 6036
+                "SIZE": 10343
+              },
+              "10.32.16.142.json": {
+                "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+                "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles\\10.32.16.142.json",
+                "RELATIVE_PATH": "Files\\ReceivedFiles\\10.32.16.142.json",
+                "COLOR": "WHITE",
+                "ADDRESS": "10.32.11.212",
+                "SIZE": 6909
               }
             }
           },
           "SenderFiles": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.2937508+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files\\SenderFiles",
+            "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles",
             "RELATIVE_PATH": "Files\\SenderFiles",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
             "CHILDREN": {
               "10.32.11.212.txt": {
-                "LAST_MODIFIED": "2024-11-12T16:31:46.3149853+05:30",
-                "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files\\SenderFiles\\10.32.11.212.txt",
+                "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+                "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles\\10.32.11.212.txt",
                 "RELATIVE_PATH": "Files\\SenderFiles\\10.32.11.212.txt",
                 "COLOR": "WHITE",
                 "ADDRESS": "10.32.11.212",
-                "SIZE": 187
+                "SIZE": 1478
+              },
+              "10.32.16.142.txt": {
+                "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+                "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles\\10.32.16.142.txt",
+                "RELATIVE_PATH": "Files\\SenderFiles\\10.32.16.142.txt",
+                "COLOR": "WHITE",
+                "ADDRESS": "10.32.11.212",
+                "SIZE": 751
               }
             }
           },
           "evans.txt.txt": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.1719128+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files\\evans.txt.txt",
+            "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files\\evans.txt.txt",
             "RELATIVE_PATH": "Files\\evans.txt.txt",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
-            "SIZE": 11
+            "SIZE": 4096
           },
           "input.json": {
-            "LAST_MODIFIED": "2024-11-12T18:11:44.5509979+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files\\input.json",
+            "LAST_MODIFIED": "2024-11-13T10:54:33.240059+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files\\input.json",
             "RELATIVE_PATH": "Files\\input.json",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
-            "SIZE": 10342
+            "SIZE": 7615
           },
           "output.json": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.2357129+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Files\\output.json",
+            "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Files\\output.json",
             "RELATIVE_PATH": "Files\\output.json",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
-            "SIZE": 4306
+            "SIZE": 7889
           }
         }
       },
       "Images": {
-        "LAST_MODIFIED": "2024-11-12T16:31:46.488902+05:30",
-        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Images",
+        "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Images",
         "RELATIVE_PATH": "Images",
         "COLOR": "WHITE",
         "ADDRESS": "10.32.11.212",
         "CHILDREN": {
           ".DS_Store": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.3563162+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Images\\.DS_Store",
+            "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Images\\.DS_Store",
             "RELATIVE_PATH": "Images\\.DS_Store",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
-            "SIZE": 6148
+            "SIZE": 8192
           },
           "drive.png": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.3791542+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Images\\drive.png",
+            "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Images\\drive.png",
             "RELATIVE_PATH": "Images\\drive.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
-            "SIZE": 19500
+            "SIZE": 20480
           },
           "error.png": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.4097729+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Images\\error.png",
+            "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Images\\error.png",
             "RELATIVE_PATH": "Images\\error.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
-            "SIZE": 13867
+            "SIZE": 16384
           },
           "file.png": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.4414192+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Images\\file.png",
+            "LAST_MODIFIED": "2024-11-13T10:41:41.6023252+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Images\\file.png",
             "RELATIVE_PATH": "Images\\file.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
             "SIZE": 2232
           },
           "folder.png": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.488902+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Images\\folder.png",
+            "LAST_MODIFIED": "2024-11-13T10:41:41.6028845+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Images\\folder.png",
             "RELATIVE_PATH": "Images\\folder.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
             "SIZE": 18431
           },
           "loading.png": {
-            "LAST_MODIFIED": "2024-11-12T16:31:46.5205292+05:30",
-            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Images\\loading.png",
+            "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+            "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\Images\\loading.png",
             "RELATIVE_PATH": "Images\\loading.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.11.212",
-            "SIZE": 6562
+            "SIZE": 8192
           }
         }
       },
       ".DS_Store": {
-        "LAST_MODIFIED": "2024-11-12T16:31:46.1401469+05:30",
-        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\.DS_Store",
+        "LAST_MODIFIED": "2024-11-13T10:42:56.2365108+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\.DS_Store",
         "RELATIVE_PATH": ".DS_Store",
         "COLOR": "WHITE",
         "ADDRESS": "10.32.11.212",
-        "SIZE": 6148
+        "SIZE": 8192
       },
-      "Dexter C. Kozen (auth.) Automata and Computability 1977.pdf": {
-        "LAST_MODIFIED": "2024-11-12T17:25:46.793156+05:30",
-        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\Dexter C. Kozen (auth.) Automata and Computability 1977.pdf",
-        "RELATIVE_PATH": "Dexter C. Kozen (auth.) Automata and Computability 1977.pdf",
+      "pexels-krizz59-12795.jpg": {
+        "LAST_MODIFIED": "2024-11-13T10:53:00.4891682+05:30",
+        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\final_S\\FileCloner\\FileCloner\\Assets\\pexels-krizz59-12795.jpg",
+        "RELATIVE_PATH": "pexels-krizz59-12795.jpg",
         "COLOR": "WHITE",
         "ADDRESS": "10.32.11.212",
-        "SIZE": 45756455
-      },
-      "pexels-jonathanborba-29327947.jpg": {
-        "LAST_MODIFIED": "2024-11-12T17:23:17.7430449+05:30",
-        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\pexels-jonathanborba-29327947.jpg",
-        "RELATIVE_PATH": "pexels-jonathanborba-29327947.jpg",
-        "COLOR": "WHITE",
-        "ADDRESS": "10.32.11.212",
-        "SIZE": 1876661
-      },
-      "pexels-jonathanborba-29360730.jpg": {
-        "LAST_MODIFIED": "2024-11-12T17:16:45.2502867+05:30",
-        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\pexels-jonathanborba-29360730.jpg",
-        "RELATIVE_PATH": "pexels-jonathanborba-29360730.jpg",
-        "COLOR": "WHITE",
-        "ADDRESS": "10.32.11.212",
-        "SIZE": 1524531
-      },
-      "th.jpg": {
-        "LAST_MODIFIED": "2024-11-12T16:34:08.2930115+05:30",
-        "FULL_PATH": "C:\\Users\\EVANS SAMUEL BIJU\\Downloads\\FileCloner-neeraj-debugging\\FileCloner-neeraj-debugging\\FileCloner\\Assets\\th.jpg",
-        "RELATIVE_PATH": "th.jpg",
-        "COLOR": "WHITE",
-        "ADDRESS": "10.32.11.212",
-        "SIZE": 16523
+        "SIZE": 1831349
       }
     }
   }

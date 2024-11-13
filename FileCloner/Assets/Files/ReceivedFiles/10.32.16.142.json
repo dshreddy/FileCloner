@@ -1,108 +1,124 @@
 {
   "Assets": {
-    "LAST_MODIFIED": "2024-11-12T23:41:17.8095766+05:30",
+    "LAST_MODIFIED": "2024-11-13T16:22:55.6466227+05:30",
     "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets",
     "RELATIVE_PATH": ".",
     "COLOR": "WHITE",
     "ADDRESS": "10.32.16.142",
     "CHILDREN": {
       "Files": {
-        "LAST_MODIFIED": "2024-11-12T22:53:31.7856657+05:30",
+        "LAST_MODIFIED": "2024-11-13T16:23:00.4581475+05:30",
         "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files",
         "RELATIVE_PATH": "Files",
         "COLOR": "WHITE",
         "ADDRESS": "10.32.16.142",
         "CHILDREN": {
           "ReceivedFiles": {
-            "LAST_MODIFIED": "2024-11-12T22:53:31.7781396+05:30",
+            "LAST_MODIFIED": "2024-11-13T16:22:55.6466227+05:30",
             "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles",
             "RELATIVE_PATH": "Files\\ReceivedFiles",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.16.142",
             "CHILDREN": {
               "10.32.11.212.json": {
-                "LAST_MODIFIED": "2024-11-12T22:53:31.7781396+05:30",
+                "LAST_MODIFIED": "2024-11-13T16:22:55.6466227+05:30",
                 "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles\\10.32.11.212.json",
                 "RELATIVE_PATH": "Files\\ReceivedFiles\\10.32.11.212.json",
                 "COLOR": "WHITE",
                 "ADDRESS": "10.32.16.142",
-                "SIZE": 7511
+                "SIZE": 10343
+              },
+              "10.32.16.142.json": {
+                "LAST_MODIFIED": "2024-11-13T16:22:55.6466227+05:30",
+                "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles\\10.32.16.142.json",
+                "RELATIVE_PATH": "Files\\ReceivedFiles\\10.32.16.142.json",
+                "COLOR": "WHITE",
+                "ADDRESS": "10.32.16.142",
+                "SIZE": 6909
               }
             }
           },
           "SenderFiles": {
-            "LAST_MODIFIED": "2024-11-12T22:53:31.7856657+05:30",
+            "LAST_MODIFIED": "2024-11-13T16:22:55.6620494+05:30",
             "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles",
             "RELATIVE_PATH": "Files\\SenderFiles",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.16.142",
             "CHILDREN": {
               "10.32.11.212.txt": {
-                "LAST_MODIFIED": "2024-11-12T22:53:31.7856657+05:30",
+                "LAST_MODIFIED": "2024-11-13T16:22:55.6620494+05:30",
                 "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles\\10.32.11.212.txt",
                 "RELATIVE_PATH": "Files\\SenderFiles\\10.32.11.212.txt",
                 "COLOR": "WHITE",
                 "ADDRESS": "10.32.16.142",
-                "SIZE": 184
+                "SIZE": 1478
+              },
+              "10.32.16.142.txt": {
+                "LAST_MODIFIED": "2024-11-13T16:22:55.6620494+05:30",
+                "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles\\10.32.16.142.txt",
+                "RELATIVE_PATH": "Files\\SenderFiles\\10.32.16.142.txt",
+                "COLOR": "WHITE",
+                "ADDRESS": "10.32.16.142",
+                "SIZE": 751
               }
             }
           },
           "evans.txt.txt": {
-            "LAST_MODIFIED": "2024-11-12T22:53:31.7856657+05:30",
+            "LAST_MODIFIED": "2024-11-13T16:22:55.6620494+05:30",
             "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files\\evans.txt.txt",
             "RELATIVE_PATH": "Files\\evans.txt.txt",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.16.142",
-            "SIZE": 11
+            "SIZE": 4096
           },
           "input.json": {
-            "LAST_MODIFIED": "2024-11-12T23:41:40.2433504+05:30",
+            "LAST_MODIFIED": "2024-11-13T16:24:03.0491458+05:30",
             "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files\\input.json",
             "RELATIVE_PATH": "Files\\input.json",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.16.142",
-            "SIZE": 6909
+            "SIZE": 7808
           },
           "output.json": {
-            "LAST_MODIFIED": "2024-11-12T22:53:31.7889776+05:30",
+            "LAST_MODIFIED": "2024-11-13T16:22:55.6685774+05:30",
             "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Files\\output.json",
             "RELATIVE_PATH": "Files\\output.json",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.16.142",
-            "SIZE": 4296
+            "SIZE": 7889
           }
         }
       },
       "Images": {
-        "LAST_MODIFIED": "2024-11-12T22:52:14.7575174+05:30",
+        "LAST_MODIFIED": "2024-11-13T16:22:55.6781052+05:30",
         "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Images",
         "RELATIVE_PATH": "Images",
         "COLOR": "WHITE",
         "ADDRESS": "10.32.16.142",
         "CHILDREN": {
           ".DS_Store": {
-            "LAST_MODIFIED": "2024-11-12T22:52:14.7482441+05:30",
+            "LAST_MODIFIED": "2024-11-13T16:22:55.6685774+05:30",
             "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Images\\.DS_Store",
             "RELATIVE_PATH": "Images\\.DS_Store",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.16.142",
-            "SIZE": 6148
+            "SIZE": 8192
           },
           "drive.png": {
-            "LAST_MODIFIED": "2024-11-12T22:52:14.754241+05:30",
+            "LAST_MODIFIED": "2024-11-13T16:22:55.6685774+05:30",
             "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Images\\drive.png",
             "RELATIVE_PATH": "Images\\drive.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.16.142",
-            "SIZE": 19500
+            "SIZE": 20480
           },
           "error.png": {
-            "LAST_MODIFIED": "2024-11-12T22:52:14.754241+05:30",
+            "LAST_MODIFIED": "2024-11-13T16:22:55.6781052+05:30",
             "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Images\\error.png",
             "RELATIVE_PATH": "Images\\error.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.16.142",
-            "SIZE": 13867
+            "SIZE": 16384
           },
           "file.png": {
             "LAST_MODIFIED": "2024-11-12T22:52:14.754241+05:30",
@@ -121,12 +137,12 @@
             "SIZE": 18431
           },
           "loading.png": {
-            "LAST_MODIFIED": "2024-11-12T22:52:14.7575174+05:30",
+            "LAST_MODIFIED": "2024-11-13T16:22:55.6781052+05:30",
             "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\Images\\loading.png",
             "RELATIVE_PATH": "Images\\loading.png",
             "COLOR": "WHITE",
             "ADDRESS": "10.32.16.142",
-            "SIZE": 6562
+            "SIZE": 8192
           }
         }
       },
@@ -148,12 +164,12 @@
         }
       },
       ".DS_Store": {
-        "LAST_MODIFIED": "2024-11-12T22:52:14.7482441+05:30",
+        "LAST_MODIFIED": "2024-11-13T16:22:55.6466227+05:30",
         "FULL_PATH": "C:\\Users\\sarat\\temp\\Neeraj\\FileCloner\\FileCloner\\Assets\\.DS_Store",
         "RELATIVE_PATH": ".DS_Store",
         "COLOR": "WHITE",
         "ADDRESS": "10.32.16.142",
-        "SIZE": 6148
+        "SIZE": 8192
       }
     }
   }

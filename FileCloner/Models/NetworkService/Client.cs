@@ -373,11 +373,14 @@ namespace FileCloner.Models.NetworkService
                 byte[] buffer = serializer.Deserialize<byte[]>(serializedFileContent);
 
                 using FileStream fileStream = new FileStream(requesterPath, fileMode, FileAccess.Write);
-                fileStream.Write(buffer, 0, buffer.Length);
+                if (buffer != null)
+                {
+                    fileStream.Write(buffer, 0, buffer.Length);
+                }
 
                 logAction?.Invoke(
                     $"[Client] File chunk : {chunkNumber}/{numberOfTransmissionsRequired} from"
-                    + " {data.From} and saved to {requesterPath}"
+                    + $" {data.From} and saved to {requesterPath}"
                 );
 
                 if (chunkNumber == numberOfTransmissionsRequired)
