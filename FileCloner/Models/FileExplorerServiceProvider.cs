@@ -25,6 +25,17 @@ namespace FileCloner.Models
     /// </summary>
     public class FileExplorerServiceProvider
     {
+        public void CleanFolder(string folderPath)
+        {
+            if (Directory.Exists(folderPath))
+            {
+                foreach (var file in Directory.GetFiles(folderPath))
+                {
+                    File.Delete(file);
+                }
+            }
+        }
+
         /// <summary>
         /// Generates an input file in JSON format representing the directory structure.
         /// </summary>

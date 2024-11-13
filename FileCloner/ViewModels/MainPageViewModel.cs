@@ -460,6 +460,8 @@ namespace FileCloner.ViewModels
             IsStartCloningEnabled = false;
             // Ensure that the directory for sender files exists
             Directory.CreateDirectory(Constants.senderFilesFolderPath);
+            // clean the sender files folder before you start populating it with files
+            _fileExplorerServiceProvider.CleanFolder(Constants.senderFilesFolderPath);
 
             foreach (var entry in _selectedFiles)
             {
