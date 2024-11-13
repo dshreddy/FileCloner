@@ -197,14 +197,23 @@ namespace FileCloner.Models.NetworkService
         public void SendFilesInChunks(string from, string path, string requesterPath)
         {
             using FileStream fileStream = new(path, FileMode.Open, FileAccess.Read);
-            byte[] buffer = new byte[Constants.FileChunkSize];
+            FileInfo fileInfo = new(path);
+            long fileSizeInBytes = fileInfo.Length;
+            int bufferSize = fileSizeInBytes < Constants.FileChunkSize ? (int)fileSizeInBytes : Constants.FileChunkSize;
+            byte[] buffer = new byte[bufferSize];
             int bytesRead = 0;
-            int numberOfChunksSent = 0;
+            int indexOfChunkBeingSent = 0;
 
             try
             {
                 while ((bytesRead = fileStream.Read(buffer, 0, buffer.Length)) > 0)
                 {
+                    if (bytesRead < buffer.Length)
+                    {
+                        // Resize the buffer to match the exact bytes read on the final chunk
+                        buffer = buffer.Take(bytesRead).ToArray();
+                    }
+
                     Message message = new Message
                     {
                         Subject = Constants.cloning,
@@ -212,18 +221,18 @@ namespace FileCloner.Models.NetworkService
                         From = Constants.IPAddress,
                         MetaData = requesterPath,
                         To = from,
-                        Body = $"{numberOfChunksSent}:" + serializer.Serialize(buffer)
+                        Body = $"{indexOfChunkBeingSent}:" + serializer.Serialize(buffer)
                     };
 
                     client.Send(serializer.Serialize<Message>(message), Constants.moduleName, "");
-                    ++numberOfChunksSent;
+                    ++indexOfChunkBeingSent;
                     logAction?.Invoke($"[Client] Response Sent to {from}");
                 }
             }
             catch (Exception ex)
             {
                 logAction?.Invoke(
-                    $"[Client] Exception occured while sending {numberOfChunksSent} : {ex.Message}"
+                    $"[Client] Exception occured while sending {indexOfChunkBeingSent} : {ex.Message}"
                 );
             }
 
