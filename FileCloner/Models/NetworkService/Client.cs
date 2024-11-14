@@ -18,6 +18,7 @@ using Networking.Serialization;
 using System.IO;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace FileCloner.Models.NetworkService
 {
@@ -364,6 +365,11 @@ namespace FileCloner.Models.NetworkService
                 if (buffer != null)
                 {
                     fileStream.Write(buffer, 0, buffer.Length);
+                }
+                else
+                {
+                    byte[] emptyBytes = Encoding.UTF8.GetBytes("");
+                    fileStream.Write(emptyBytes, 0, emptyBytes.Length);
                 }
 
                 logAction?.Invoke($"[Client] File received from {data.From} and saved to {requesterPath}");

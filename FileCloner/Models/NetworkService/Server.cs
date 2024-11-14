@@ -128,8 +128,8 @@ namespace FileCloner.Models.NetworkService
             logAction.Invoke($"[Server] {clientIpAddress} Joined");
 
             // Add the client to the client list and increment the counter
-            clientList.Add(clientIpAddress, clientUniqueId);
             server.AddClient(clientUniqueId, client);
+            clientList.Add(clientIpAddress, clientUniqueId);
             clientid++;
         }
 
