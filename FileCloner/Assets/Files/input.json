@@ -64,61 +64,27 @@
         }
       },
       "Files": {
-        "LAST_MODIFIED": "2024-11-13T02:25:30.0777264+05:30",
+        "LAST_MODIFIED": "2024-11-14T14:47:26.4966668+05:30",
         "FULL_PATH": "C:\\Mac\\Home\\Downloads\\FileCloner\\FileCloner\\Assets\\Files",
         "RELATIVE_PATH": "Files",
         "COLOR": "WHITE",
         "ADDRESS": "10.211.55.3",
         "CHILDREN": {
-          "SenderFiles": {
-            "LAST_MODIFIED": "2024-11-13T02:25:30.0773133+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles",
-            "RELATIVE_PATH": "Files\\SenderFiles",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
-            "CHILDREN": {
-              "10.32.11.212.txt": {
-                "LAST_MODIFIED": "2024-11-13T02:25:30.0773661+05:30",
-                "FULL_PATH": "C:\\Mac\\Home\\Downloads\\FileCloner\\FileCloner\\Assets\\Files\\SenderFiles\\10.32.11.212.txt",
-                "RELATIVE_PATH": "Files\\SenderFiles\\10.32.11.212.txt",
-                "COLOR": "WHITE",
-                "ADDRESS": "10.211.55.3",
-                "SIZE": 183
-              }
-            }
-          },
-          "ReceivedFiles": {
-            "LAST_MODIFIED": "2024-11-13T02:25:30.0770276+05:30",
-            "FULL_PATH": "C:\\Mac\\Home\\Downloads\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles",
-            "RELATIVE_PATH": "Files\\ReceivedFiles",
-            "COLOR": "WHITE",
-            "ADDRESS": "10.211.55.3",
-            "CHILDREN": {
-              "10.32.11.212.json": {
-                "LAST_MODIFIED": "2024-11-13T02:25:30.0771777+05:30",
-                "FULL_PATH": "C:\\Mac\\Home\\Downloads\\FileCloner\\FileCloner\\Assets\\Files\\ReceivedFiles\\10.32.11.212.json",
-                "RELATIVE_PATH": "Files\\ReceivedFiles\\10.32.11.212.json",
-                "COLOR": "WHITE",
-                "ADDRESS": "10.211.55.3",
-                "SIZE": 7361
-              }
-            }
-          },
           "input.json": {
-            "LAST_MODIFIED": "2024-11-13T02:25:30.0776649+05:30",
+            "LAST_MODIFIED": "2024-11-14T14:47:26.4965255+05:30",
             "FULL_PATH": "C:\\Mac\\Home\\Downloads\\FileCloner\\FileCloner\\Assets\\Files\\input.json",
             "RELATIVE_PATH": "Files\\input.json",
             "COLOR": "WHITE",
             "ADDRESS": "10.211.55.3",
-            "SIZE": 6195
+            "SIZE": 5250
           },
           "output.json": {
-            "LAST_MODIFIED": "2024-11-13T02:25:30.0778089+05:30",
+            "LAST_MODIFIED": "2024-11-14T14:47:26.496885+05:30",
             "FULL_PATH": "C:\\Mac\\Home\\Downloads\\FileCloner\\FileCloner\\Assets\\Files\\output.json",
             "RELATIVE_PATH": "Files\\output.json",
             "COLOR": "WHITE",
             "ADDRESS": "10.211.55.3",
-            "SIZE": 4296
+            "SIZE": 3465
           },
           "evans.txt.txt": {
             "LAST_MODIFIED": "2024-11-13T02:25:30.0774714+05:30",
