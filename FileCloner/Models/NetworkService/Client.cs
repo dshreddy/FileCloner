@@ -89,6 +89,10 @@ namespace FileCloner.Models.NetworkService
                         File.Delete(file);
                     }
                 }
+                else
+                {
+                    Directory.CreateDirectory(Constants.receivedFilesFolderPath);
+                }
 
                 logAction?.Invoke("[Client] Request Sent");
             }
