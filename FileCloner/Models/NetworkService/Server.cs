@@ -2,13 +2,13 @@
  * Filename    = Server.cs
  *
  * Author      = Sai Hemanth Reddy
- * 
+ *
  * Project     = FileCloner
  *
  * Description = Manages server-side communication for the FileCloner application,
- *               handling client connections, message broadcasting, and targeted 
- *               communication between clients. The Server class maintains a list 
- *               of connected clients and ensures messages are delivered to the 
+ *               handling client connections, message broadcasting, and targeted
+ *               communication between clients. The Server class maintains a list
+ *               of connected clients and ensures messages are delivered to the
  *               appropriate recipients.
  *****************************************************************************/
 
@@ -18,6 +18,7 @@ using System.Net;
 using Networking;
 using Networking.Serialization;
 using System.Runtime.CompilerServices;
+using System.Diagnostics;
 
 namespace FileCloner.Models.NetworkService
 {
@@ -84,11 +85,15 @@ namespace FileCloner.Models.NetworkService
         {
             string clientIpAddress = ((IPEndPoint)socket.Client.RemoteEndPoint).Address.ToString();
             clientList.Add(clientIpAddress, clientId);
-            logAction.Invoke($"[Server] {clientIpAddress} Joined");
+            Trace.WriteLine($"[filecloner] {clientIpAddress}" + clientId);
+            if (logAction != null)
+            {
+                logAction.Invoke($"[Server] {clientIpAddress} Joined");
+            }
         }
 
         /// <summary>
-        /// Handles data received from clients, determines if it's a broadcast or 
+        /// Handles data received from clients, determines if it's a broadcast or
         /// directed message, and routes it accordingly.
         /// </summary>
         /// <param name="serializedData">The serialized data received from a client.</param>
