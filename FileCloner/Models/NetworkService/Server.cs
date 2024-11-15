@@ -51,8 +51,8 @@ namespace FileCloner.Models.NetworkService
 
         public void SetUser(string clientId, TcpClient socket)
         {
-            // get IP address from socket
-            // Ask Hemant
+            string clientIpAddress = ((IPEndPoint)socket.Client.RemoteEndPoint).Address.ToString();
+            clientList.Add(clientIpAddress, clientId);
 
         }
 
@@ -143,9 +143,9 @@ namespace FileCloner.Models.NetworkService
             logAction.Invoke($"[Server] {clientIpAddress} Joined");
 
             // Add the client to the client list and increment the counter
-            server.AddClient(clientUniqueId, client);
-            clientList.Add(clientIpAddress, clientUniqueId);
-            clientid++;
+          //  server.AddClient(clientUniqueId, client);
+          //  clientList.Add(clientIpAddress, clientUniqueId);
+          //  clientid++;
         }
 
         /// <summary>
