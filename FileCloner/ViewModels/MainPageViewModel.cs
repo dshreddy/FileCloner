@@ -74,7 +74,7 @@ namespace FileCloner.ViewModels
 
             // Initialize server and client for handling file transfer communication
             _server = new Server(UpdateLog);
-            _client = new Client(UpdateLog, Constants.IPAddress, "8080");
+            _client = new Client(UpdateLog);
 
             // Register for application exit event to ensure resources are released
             System.Windows.Application.Current.Exit += (sender, e) =>

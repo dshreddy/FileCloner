@@ -17,6 +17,7 @@ using System.Net.Sockets;
 using System.Net;
 using Networking;
 using Networking.Serialization;
+using System.Runtime.CompilerServices;
 
 namespace FileCloner.Models.NetworkService
 {
@@ -40,13 +41,43 @@ namespace FileCloner.Models.NetworkService
         private static ISerializer serializer = new Serializer();
 
         // Delegate for logging actions, e.g., writing to UI or console
-        private readonly Action<string> logAction;
+        private Action<string> logAction;
 
-        public static Server _ServerInstance;
+        private static Server _instance;
+        private static readonly object _lock = new object();
 
-        public static Server GetServerInstance()
+        /// <summary>
+        /// Initializes the server, starts listening on the specified port,
+        /// and subscribes to the message handler for the module.
+        /// </summary>
+        /// <param name="logAction">Delegate for logging status updates and errors.</param>
+        private Server()
         {
-            return _ServerInstance;
+            server.Subscribe(Constants.moduleName, this, false);
+        }
+
+        /// <summary>
+        /// Gets the singleton instance of the Server class, optionally updating the log action.
+        /// </summary>
+        /// <param name="logAction">Delegate for logging status updates and errors (optional).</param>
+        /// <returns>The singleton instance of the Server class.</returns>
+        public static Server GetServerInstance(Action<string> logAction = null)
+        {
+            lock (_lock)
+            {
+                if (_instance == null)
+                {
+                    _instance = new Server();
+                }
+
+                // Update the logAction if a new one is provided
+                if (logAction != null)
+                {
+                    _instance.logAction = logAction;
+                }
+            }
+
+            return _instance;
         }
 
         public void SetUser(string clientId, TcpClient socket)
@@ -54,18 +85,6 @@ namespace FileCloner.Models.NetworkService
             string clientIpAddress = ((IPEndPoint)socket.Client.RemoteEndPoint).Address.ToString();
             clientList.Add(clientIpAddress, clientId);
             logAction.Invoke($"[Server] {clientIpAddress} Joined");
-        }
-
-        /// <summary>
-        /// Initializes the server, starts listening on the specified port,
-        /// and subscribes to the message handler for the module.
-        /// </summary>
-        /// <param name="logAction">Delegate for logging status updates and errors.</param>
-        public Server(Action<string> logAction)
-        {
-            this.logAction = logAction;
-            _ServerInstance = this;
-            server.Subscribe(Constants.moduleName, this, false);
         }
 
         /// <summary>
