@@ -53,7 +53,7 @@ namespace FileCloner.Models.NetworkService
         {
             string clientIpAddress = ((IPEndPoint)socket.Client.RemoteEndPoint).Address.ToString();
             clientList.Add(clientIpAddress, clientId);
-
+            logAction.Invoke($"[Server] {clientIpAddress} Joined");
         }
 
         /// <summary>
@@ -65,17 +65,7 @@ namespace FileCloner.Models.NetworkService
         {
             this.logAction = logAction;
             _ServerInstance = this;
-            try
-            {
-                // Start server on the specified port and subscribe for notifications
-                server.Start(serverPort: "8080");
-                server.Subscribe(Constants.moduleName, this, false);
-                logAction.Invoke("[Server] Started successfully");
-            }
-            catch (Exception e)
-            {
-                throw new Exception("[Server] Not started: " + e.Message);
-            }
+            server.Subscribe(Constants.moduleName, this, false);
         }
 
         /// <summary>
@@ -127,25 +117,6 @@ namespace FileCloner.Models.NetworkService
                 logAction.Invoke($"[Server] {clientList[clientEntry.Key]} Left");
                 clientList.Remove(clientEntry.Key);
             }
-        }
-
-        /// <summary>
-        /// Adds a client to the server's client list when they connect.
-        /// </summary>
-        /// <param name="client">The TcpClient instance representing the connected client.</param>
-        public void OnClientJoined(TcpClient client)
-        {
-            // Retrieve the client's IP address
-            string clientIpAddress = ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString();
-
-            // Generate a unique ID for the client based on the clientid counter
-            string clientUniqueId = clientid.ToString();
-            logAction.Invoke($"[Server] {clientIpAddress} Joined");
-
-            // Add the client to the client list and increment the counter
-          //  server.AddClient(clientUniqueId, client);
-          //  clientList.Add(clientIpAddress, clientUniqueId);
-          //  clientid++;
         }
 
         /// <summary>

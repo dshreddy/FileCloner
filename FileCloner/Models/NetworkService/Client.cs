@@ -44,23 +44,13 @@ namespace FileCloner.Models.NetworkService
         /// <param name="logAction">Action delegate to log messages to UI or console.</param>
         /// <param name="ipAddress">IP address of the server to connect to.</param>
         /// <param name="port">Port of the server to connect to.</param>
-        public Client(Action<string> logAction, string ipAddress, string port)
+        public Client(Action<string> logAction)
         {
             this.logAction = logAction;
             client = CommunicationFactory.GetCommunicator(isClientSide: true);
             serializer = new Serializer();
-
-            // Start the client connection
-            string result = client.Start(ipAddress, port);
-            if (result == Constants.success)
-            {
-                logAction?.Invoke("[Client] Connected to server!");
-                client.Subscribe(Constants.moduleName, this, false); // Subscribe to receive notifications
-            }
-            else
-            {
-                logAction?.Invoke("[Client] Failed to connect to server.");
-            }
+            logAction?.Invoke("[Client] Connected to server!");
+            client.Subscribe(Constants.moduleName, this, false); // Subscribe to receive notifications
         }
 
         /// <summary>
