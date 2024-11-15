@@ -22,6 +22,11 @@ namespace FileCloner.Models
     /// </summary>
     public class Constants
     {
+        public static readonly string basePath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "FileCloner"
+        );
+        
         // Icon Paths
         public static readonly string loadingIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Images", "loading.png"));
         public static readonly string driveIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Images", "drive.png"));
@@ -33,8 +38,7 @@ namespace FileCloner.Models
         public static readonly string configFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "config.txt"));
         // public static readonly string defaultFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets"));
         public static readonly string defaultFolderPath = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "FileCloner", "Temp"
+            basePath, "Temp"
         );
 
         public static readonly string inputFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "input.json"));
