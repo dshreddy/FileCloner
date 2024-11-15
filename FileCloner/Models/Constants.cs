@@ -49,6 +49,7 @@ namespace FileCloner.Models
 
         // Size of FileChunk to be sent over network
         public static int FileChunkSize = 1024 * 1024;
+        public static int ChunkStartIndex = 1;
 
         private static string GetIP()
         {

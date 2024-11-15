@@ -177,18 +177,6 @@ namespace FileCloner.Models.NetworkService
         {
             try
             {
-                //Message message = new Message
-                //{
-                //    Subject = Constants.cloning,
-                //    RequestID = requestID,
-                //    From = Constants.IPAddress,
-                //    MetaData = requesterPath,
-                //    To = from,
-                //    Body = string.Join(Environment.NewLine, File.ReadAllLines(path))
-                //};
-
-                //client.Send(serializer.Serialize<Message>(message), Constants.moduleName, "");
-
                 Thread senderThread = new Thread(() =>
                 {
                     SendFilesInChunks(from, path, requesterPath);
@@ -219,7 +207,7 @@ namespace FileCloner.Models.NetworkService
             int bufferSize = fileSizeInBytes < Constants.FileChunkSize ? (int)fileSizeInBytes : Constants.FileChunkSize;
             byte[] buffer = new byte[bufferSize];
             int bytesRead = 0;
-            int indexOfChunkBeingSent = 0;
+            int indexOfChunkBeingSent = Constants.ChunkStartIndex;
 
             try
             {
@@ -374,7 +362,7 @@ namespace FileCloner.Models.NetworkService
 
                 int chunkNumber = int.Parse(messageBodyList[0]);
                 string serializedFileContent = messageBodyList[1];
-                FileMode fileMode = chunkNumber == 0 ? FileMode.Create : FileMode.Append;
+                FileMode fileMode = chunkNumber == Constants.ChunkStartIndex ? FileMode.Create : FileMode.Append;
                 byte[] buffer = serializer.Deserialize<byte[]>(serializedFileContent);
 
                 using FileStream fileStream = new FileStream(requesterPath, fileMode, FileAccess.Write);
@@ -388,7 +376,12 @@ namespace FileCloner.Models.NetworkService
                     fileStream.Write(emptyBytes, 0, emptyBytes.Length);
                 }
 
-                logAction?.Invoke($"[Client] File received from {data.From} and saved to {requesterPath}");
+                if (chunkNumber % 10 == 0)
+                {
+                    logAction?.Invoke($"[Client] File received ({chunkNumber} chunks till now)" +
+                        $" from {data.From} and saved to {requesterPath}");
+                }
+
             }
             catch (Exception ex)
             {
