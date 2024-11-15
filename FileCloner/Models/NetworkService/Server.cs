@@ -85,7 +85,6 @@ namespace FileCloner.Models.NetworkService
         {
             string clientIpAddress = ((IPEndPoint)socket.Client.RemoteEndPoint).Address.ToString();
             clientList.Add(clientIpAddress, clientId);
-            Trace.WriteLine($"[filecloner] {clientIpAddress}" + clientId);
             if (logAction != null)
             {
                 logAction.Invoke($"[Server] {clientIpAddress} Joined");
