@@ -38,6 +38,10 @@ namespace FileCloner.ViewModels
         {
             _instance = this; // Set instance for static access
 
+            if (!Directory.Exists(Constants.defaultFolderPath))
+            {
+                Directory.CreateDirectory(Constants.defaultFolderPath);
+            }
             // Set default root directory path
             RootDirectoryPath = Constants.defaultFolderPath;
 

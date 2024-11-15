@@ -31,7 +31,12 @@ namespace FileCloner.Models
 
         // File & Folder Paths
         public static readonly string configFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "config.txt"));
-        public static readonly string defaultFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Temp"));
+        // public static readonly string defaultFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets"));
+        public static readonly string defaultFolderPath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "FileCloner", "Temp"
+        );
+
         public static readonly string inputFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "input.json"));
         public static readonly string outputFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "output.json"));
         public static readonly string receivedFilesFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "ReceivedFiles"));
