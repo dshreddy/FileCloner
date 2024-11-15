@@ -29,22 +29,16 @@ namespace FileCloner.Models
         
         // Icon Paths
         public static readonly string loadingIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Images", "loading.png"));
-        public static readonly string driveIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Images", "drive.png"));
         public static readonly string fileIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Images", "file.png"));
         public static readonly string folderIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Images", "folder.png"));
-        public static readonly string errorIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Images", "error.png"));
+
 
         // File & Folder Paths
-        public static readonly string configFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "config.txt"));
-        // public static readonly string defaultFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets"));
-        public static readonly string defaultFolderPath = Path.Combine(
-            basePath, "Temp"
-        );
-
-        public static readonly string inputFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "input.json"));
-        public static readonly string outputFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "output.json"));
-        public static readonly string receivedFilesFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "ReceivedFiles"));
-        public static readonly string senderFilesFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "SenderFiles"));
+        public static readonly string defaultFolderPath = Path.Combine(basePath, "Temp");
+        public static readonly string inputFilePath = Path.Combine(basePath, "input.json");
+        public static readonly string outputFilePath = Path.Combine(basePath, "output.json");
+        public static readonly string receivedFilesFolderPath = Path.Combine(basePath, "ReceivedFiles");
+        public static readonly string senderFilesFolderPath = Path.Combine(basePath, "SenderFiles");
 
         // Network Service Constants
         public const string success = "success";
