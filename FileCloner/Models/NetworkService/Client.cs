@@ -81,6 +81,20 @@ namespace FileCloner.Models.NetworkService
 
                 // Send serialized message to server
                 client.Send(serializer.Serialize<Message>(message), Constants.moduleName, null);
+
+                // clean the folder that stores responses after sending request
+                if (Directory.Exists(Constants.receivedFilesFolderPath))
+                {
+                    foreach (var file in Directory.GetFiles(Constants.receivedFilesFolderPath))
+                    {
+                        File.Delete(file);
+                    }
+                }
+                else
+                {
+                    Directory.CreateDirectory(Constants.receivedFilesFolderPath);
+                }
+
                 logAction?.Invoke("[Client] Request Sent");
             }
             catch (Exception ex)
@@ -88,6 +102,8 @@ namespace FileCloner.Models.NetworkService
                 logAction?.Invoke("[Client] Request Failed : " + ex.Message);
             }
         }
+
+
 
         /// <summary>
         /// Sends a summary of the cloned files to each responder.
