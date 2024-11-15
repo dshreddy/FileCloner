@@ -1,4 +1,17 @@
-﻿using FileCloner.Models;
+﻿/******************************************************************************
+ * Filename    = FileClonerLogger.cs
+ *
+ * Author      = Neeraj Krishna N
+ * 
+ * Project     = FileCloner
+ *
+ * Description = A custom implementation of Logger class, which logs to a file
+ *              named FileClonerModuleName.log in the log directory. Helps 
+ *              developers in analysing any unforeseen error during the usage
+ *              of the application
+ *****************************************************************************/
+
+using FileCloner.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
