@@ -42,6 +42,20 @@ namespace FileCloner.Models.NetworkService
         // Delegate for logging actions, e.g., writing to UI or console
         private readonly Action<string> logAction;
 
+        public static Server _ServerInstance;
+
+        public static Server GetServerInstance()
+        {
+            return _ServerInstance;
+        }
+
+        public void SetUser(string clientId, TcpClient socket)
+        {
+            string clientIpAddress = ((IPEndPoint)socket.Client.RemoteEndPoint).Address.ToString();
+            clientList.Add(clientIpAddress, clientId);
+
+        }
+
         /// <summary>
         /// Initializes the server, starts listening on the specified port,
         /// and subscribes to the message handler for the module.
@@ -50,6 +64,7 @@ namespace FileCloner.Models.NetworkService
         public Server(Action<string> logAction)
         {
             this.logAction = logAction;
+            _ServerInstance = this;
             try
             {
                 // Start server on the specified port and subscribe for notifications
@@ -128,9 +143,9 @@ namespace FileCloner.Models.NetworkService
             logAction.Invoke($"[Server] {clientIpAddress} Joined");
 
             // Add the client to the client list and increment the counter
-            server.AddClient(clientUniqueId, client);
-            clientList.Add(clientIpAddress, clientUniqueId);
-            clientid++;
+          //  server.AddClient(clientUniqueId, client);
+          //  clientList.Add(clientIpAddress, clientUniqueId);
+          //  clientid++;
         }
 
         /// <summary>
