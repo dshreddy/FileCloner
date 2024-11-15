@@ -31,7 +31,7 @@ namespace FileCloner.Models
 
         // File & Folder Paths
         public static readonly string configFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "config.txt"));
-        public static readonly string defaultFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets"));
+        public static readonly string defaultFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Temp"));
         public static readonly string inputFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "input.json"));
         public static readonly string outputFilePath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "output.json"));
         public static readonly string receivedFilesFolderPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Files", "ReceivedFiles"));
@@ -48,7 +48,7 @@ namespace FileCloner.Models
         public static string IPAddress = GetIP();
 
         // Size of FileChunk to be sent over network
-        public static int FileChunkSize = 4096;
+        public static int FileChunkSize = 1024 * 1024;
 
         private static string GetIP()
         {
