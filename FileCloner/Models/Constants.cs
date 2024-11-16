@@ -1,4 +1,4 @@
-﻿/******************************************************************************
+/******************************************************************************
  * Filename    = Constants.cs
  *
  * Author      = Sai Hemanth Reddy
@@ -28,9 +28,9 @@ namespace FileCloner.Models
         );
         
         // Icon Paths
-        public static readonly string loadingIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "Assets", "Images", "loading.png"));
-        public static readonly string fileIconPath = "C:\\dev\\FileClonerIterations\\dshFileCloner\\FileCloner\\Assets\\Images\\file.png";
-        public static readonly string folderIconPath = "C:\\dev\\FileClonerIterations\\dshFileCloner\\FileCloner\\Assets\\Images\\folder.png";
+        public static readonly string loadingIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "..", "FileCloner", "Assets", "Images", "loading.png"));
+        public static readonly string fileIconPath = Path.GetFullPath(Path.Combine("..", "..", "..","..","FileCloner", "Assets", "Images", "file.png"));
+        public static readonly string folderIconPath = Path.GetFullPath(Path.Combine("..", "..", "..", "..", "FileCloner",  "Assets", "Images", "folder.png"));
 
 
         // File & Folder Paths
