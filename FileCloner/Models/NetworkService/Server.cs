@@ -37,6 +37,8 @@ namespace FileCloner.Models.NetworkService
 
         // Dictionary to store the mapping of client IP addresses to their unique IDs
         private static Dictionary<string, string> clientList = new();
+        // Lock object for synchronizing access to clientList
+        private static readonly object clientListLock = new object();
 
         // Serializer for handling message serialization and deserialization
         private static ISerializer serializer = new Serializer();
@@ -84,11 +86,20 @@ namespace FileCloner.Models.NetworkService
         public void SetUser(string clientId, TcpClient socket)
         {
             string clientIpAddress = ((IPEndPoint)socket.Client.RemoteEndPoint).Address.ToString();
-            clientList.Add(clientIpAddress, clientId);
-            if (logAction != null)
+
+            lock (clientListLock) // Synchronize access to clientList
             {
-                logAction.Invoke($"[Server] {clientIpAddress} Joined");
+                if (clientList.ContainsKey(clientIpAddress))
+                {
+                    clientList[clientIpAddress] = clientId; // Update the client ID for the existing IP
+                }
+                else
+                {
+                    clientList.Add(clientIpAddress, clientId); // Add a new entry
+                }
             }
+
+            logAction?.Invoke($"[Server] {clientIpAddress} Joined/Updated");
         }
 
         /// <summary>
@@ -108,22 +119,31 @@ namespace FileCloner.Models.NetworkService
                     return;
                 }
 
-                // Check if the message is a broadcast
+                // Handle broadcast or targeted messages
                 if (message.To == Constants.broadcast)
                 {
-                    // Send to all connected clients if it's a broadcast
-                    server.Send(serializedData, Constants.moduleName, null);
+                    server.Send(serializedData, Constants.moduleName, null); // Broadcast to all
                 }
                 else
                 {
-                    // Targeted message; find and send to the specified client
-                    string targetClientId = clientList[message.To];
-                    server.Send(serializedData, Constants.moduleName, targetClientId);
+                    string targetClientId;
+
+                    lock (clientListLock) // Synchronize access to clientList
+                    {
+                        // Safely fetch the target client ID
+                        if (!clientList.TryGetValue(message.To, out targetClientId))
+                        {
+                            logAction?.Invoke($"[Server] Target client {message.To} not found");
+                            return;
+                        }
+                    }
+
+                    server.Send(serializedData, Constants.moduleName, targetClientId); // Send to the target client
                 }
             }
             catch (Exception e)
             {
-                logAction.Invoke("[Server] Error in sending data: " + e.Message);
+                logAction?.Invoke("[Server] Error in sending data: " + e.Message);
             }
         }
 
@@ -133,12 +153,15 @@ namespace FileCloner.Models.NetworkService
         /// <param name="clientId">The unique ID of the client that left.</param>
         public void OnClientLeft(string clientId)
         {
-            // Find the client in the dictionary by clientId
-            var clientEntry = clientList.FirstOrDefault(entry => entry.Value == clientId);
-            if (!string.IsNullOrEmpty(clientEntry.Key))
+            lock (clientListLock) // Synchronize access to clientList
             {
-                logAction.Invoke($"[Server] {clientList[clientEntry.Key]} Left");
-                clientList.Remove(clientEntry.Key);
+                // Find the client in the dictionary by clientId
+                var clientEntry = clientList.FirstOrDefault(entry => entry.Value == clientId);
+                if (!string.IsNullOrEmpty(clientEntry.Key))
+                {
+                    logAction?.Invoke($"[Server] {clientList[clientEntry.Key]} Left");
+                    clientList.Remove(clientEntry.Key); // Safely remove the client
+                }
             }
         }
 
