@@ -73,7 +73,7 @@ namespace FileCloner.ViewModels
             TreeGenerator(_rootDirectoryPath);  // Load the initial tree structure
 
             // Initialize server and client for handling file transfer communication
-            _server = new Server(UpdateLog);
+            _server = Server.GetServerInstance(UpdateLog);
             _client = new Client(UpdateLog);
 
             // Register for application exit event to ensure resources are released
