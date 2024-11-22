@@ -5,6 +5,12 @@ namespace Views {
     }
 }
 
+namespace FileClonerLogging {
+   class FileClonerLogger {
+        +Log()
+    }
+}
+
 namespace ViewModels {
     class ViewModelBase {
         +ViewModelBase()
@@ -63,11 +69,14 @@ ViewModels.MainPageViewModel *-- ViewModels.RelayCommand
 Models.NetworkService.Server o-- Models.NetworkService.Message
 Models.NetworkService.Client o-- Models.NetworkService.Message
 
+Models.NetworkService.Server *-- FileClonerLogging.FileClonerLogger
+Models.NetworkService.Client *-- FileClonerLogging.FileClonerLogger
+Models.FileExplorerServiceProvider *-- FileClonerLogging.FileClonerLogger
+Models.SummaryGenerator *-- FileClonerLogging.FileClonerLogger
+
 ViewModels.MainPageViewModel *-- Models.NetworkService.Server
 ViewModels.MainPageViewModel *-- Models.NetworkService.Client
 ViewModels.MainPageViewModel *-- Models.FileExplorerServiceProvider
 ViewModels.MainPageViewModel --> Models.SummaryGenerator
 ViewModels.MainPageViewModel --> Models.Constants
-
-
 @enduml
