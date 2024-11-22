@@ -100,7 +100,7 @@ public class Server : INotificationHandler
 ```
 
 ## Class & Module Diagram 
-![Class and Module Diagram](./module_and_class_diagram.png "Class & Module Diagram")
+![Class and Module Diagram](./filecloner-class-diagram.png "Class & Module Diagram")
 
 ## Development Environment
 FileCloner is developed in Visual Studio Community 2022 with .NET 8.0 support. Ensure .NET desktop development tools are installed for optimal performance.
@@ -115,4 +115,3 @@ FileCloner is developed in Visual Studio Community 2022 with .NET 8.0 support. E
 ## References
 [File Explorer UI](https://github.com/felloBonello/FileExplorer/tree/master)
 [Class & Module Diagram](https://plantuml.com/)
-
